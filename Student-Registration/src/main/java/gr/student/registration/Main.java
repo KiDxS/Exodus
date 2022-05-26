@@ -3,19 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package gr.student.registration;
-
+import gr.student.registration.config.SQLDatabaseConnection;
 /**
  *
  * @author shin
  */
 public class Main extends javax.swing.JFrame {
-
+    SQLDatabaseConnection sqlConnection = new SQLDatabaseConnection();    
     /**
      * Creates new form Main
      */
     public Main() {
         initComponents();
-    }
+        sqlConnection.initializeConnection();
+    }    
     MainMenu mainMenu = new MainMenu();
     /**
      * This method is called from within the constructor to initialize the form.
@@ -232,6 +233,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         mainMenu.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
