@@ -8,13 +8,14 @@ import java.sql.*;
 
 public class SQLDatabaseConnection {
 
-    static final String DB_URL = "jdbc:mysql://localhost";
-    static final String USER = "admin";
-    static final String PASS = "VatJ3sxokbFz";
     Connection connection;
 
-    public Connection initializeConnection() {
+    // Function call to initialize a connection to the mysql database
+    public Connection initializeConnection(String database) {
         try {
+            final String DB_URL = String.format("jdbc:mysql://localhost/%s", database);
+            final String USER = "admin"; // Change this to the username of your mysql user.
+            final String PASS = "VatJ3sxokbFz"; // Change this to the password of your mysql user
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
 
         } catch (SQLException e) {
