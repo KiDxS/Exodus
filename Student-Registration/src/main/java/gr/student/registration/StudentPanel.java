@@ -174,7 +174,7 @@ public class StudentPanel extends javax.swing.JFrame {
 
         studentNumber.setBackground(new java.awt.Color(255, 255, 255));
         studentNumber.setForeground(new java.awt.Color(0, 0, 0));
-        studentNumber.setText("Student No.");
+        studentNumber.setText("LRN");
         studentNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentNumberActionPerformed(evt);
@@ -184,7 +184,7 @@ public class StudentPanel extends javax.swing.JFrame {
         studentNumberLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         studentNumberLabel.setForeground(new java.awt.Color(0, 0, 0));
         studentNumberLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        studentNumberLabel.setText("Student No.");
+        studentNumberLabel.setText("LRN");
 
         submitButton.setBackground(new java.awt.Color(0, 128, 55));
         submitButton.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
