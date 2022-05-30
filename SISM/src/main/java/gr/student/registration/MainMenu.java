@@ -47,16 +47,19 @@ public class MainMenu extends javax.swing.JFrame {
         addButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addButton.setForeground(new java.awt.Color(255, 255, 255));
         addButton.setText("Add");
+        addButton.setBorderPainted(false);
 
         deleteButton.setBackground(java.awt.Color.red);
         deleteButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(255, 255, 255));
         deleteButton.setText("Delete");
+        deleteButton.setBorderPainted(false);
 
         viewButton.setBackground(new java.awt.Color(0, 135, 150));
         viewButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         viewButton.setForeground(new java.awt.Color(255, 255, 255));
         viewButton.setText("View");
+        viewButton.setBorderPainted(false);
 
         table.getTableHeader().setBackground(new java.awt.Color(0,0,0));
         table.setBackground(new java.awt.Color(255, 255, 255));
@@ -108,6 +111,7 @@ public class MainMenu extends javax.swing.JFrame {
         table.setSelectionBackground(new java.awt.Color(153, 153, 153));
         table.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(table);
+        table.setTableHeader(null);
 
         javax.swing.GroupLayout mainMenuPanelLayout = new javax.swing.GroupLayout(mainMenuPanel);
         mainMenuPanel.setLayout(mainMenuPanelLayout);
