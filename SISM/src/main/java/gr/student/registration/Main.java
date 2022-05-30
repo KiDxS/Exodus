@@ -90,13 +90,13 @@ public class Main extends javax.swing.JFrame {
 
         loginPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        signInLabel.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        signInLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         signInLabel.setForeground(new java.awt.Color(0, 0, 0));
         signInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         signInLabel.setText("Sign in");
 
         usernameField.setBackground(new java.awt.Color(255, 255, 255));
-        usernameField.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
+        usernameField.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         usernameField.setForeground(new java.awt.Color(0, 0, 0));
         usernameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         usernameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -107,18 +107,18 @@ public class Main extends javax.swing.JFrame {
         });
 
         usernameLabel.setBackground(new java.awt.Color(0, 0, 0));
-        usernameLabel.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        usernameLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         usernameLabel.setForeground(new java.awt.Color(0, 0, 0));
         usernameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         usernameLabel.setText("Username:");
 
-        passwordLabel.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        passwordLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         passwordLabel.setForeground(new java.awt.Color(0, 0, 0));
         passwordLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         passwordLabel.setText("Password:");
 
         loginButton.setBackground(new java.awt.Color(0, 128, 55));
-        loginButton.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        loginButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
         loginButton.setBorder(null);
@@ -133,7 +133,7 @@ public class Main extends javax.swing.JFrame {
         });
 
         passwordField.setBackground(new java.awt.Color(255, 255, 255));
-        passwordField.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
+        passwordField.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         passwordField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         passwordField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         passwordField.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +200,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
