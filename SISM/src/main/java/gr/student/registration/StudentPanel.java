@@ -163,12 +163,11 @@ public class StudentPanel extends javax.swing.JFrame {
                         .addComponent(birthPlaceField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(firstNameField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(lastNameField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(birthDateField)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(sexField, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(birthDateField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(sexField, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -228,7 +227,7 @@ public class StudentPanel extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jPanel3);
 
         cancelButton.setBackground(new java.awt.Color(255, 0, 0));
-        cancelButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        cancelButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +237,8 @@ public class StudentPanel extends javax.swing.JFrame {
         });
 
         clearButton.setBackground(new java.awt.Color(131, 131, 131));
-        clearButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        clearButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        clearButton.setForeground(new java.awt.Color(255, 255, 255));
         clearButton.setText("Clear All");
         clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,8 +246,9 @@ public class StudentPanel extends javax.swing.JFrame {
             }
         });
 
-        submitButton.setBackground(new java.awt.Color(0, 135, 150));
-        submitButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        submitButton.setBackground(new java.awt.Color(0, 145, 24));
+        submitButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        submitButton.setForeground(new java.awt.Color(255, 255, 255));
         submitButton.setText("Submit");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
