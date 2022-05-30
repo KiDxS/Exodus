@@ -27,394 +27,70 @@ public class StudentPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        lastName = new javax.swing.JTextField();
-        lastNameLabel = new javax.swing.JLabel();
-        firstName = new javax.swing.JTextField();
-        firstNameLabel = new javax.swing.JLabel();
-        middleName = new javax.swing.JTextField();
-        middleNameLabel = new javax.swing.JLabel();
-        suffix = new javax.swing.JTextField();
-        suffixLabel = new javax.swing.JLabel();
-        age = new javax.swing.JTextField();
-        ageLabel = new javax.swing.JLabel();
-        birthPlace = new javax.swing.JTextField();
-        ageLabel1 = new javax.swing.JLabel();
-        yearLevel = new javax.swing.JTextField();
-        yearLevelLabel = new javax.swing.JLabel();
-        courseDropDown = new javax.swing.JComboBox<>();
-        courseLabel = new javax.swing.JLabel();
-        studentNumber = new javax.swing.JTextField();
-        studentNumberLabel = new javax.swing.JLabel();
-        submitButton = new javax.swing.JButton();
-        clearAllButton = new javax.swing.JButton();
-        cancelButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        Title = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(49, 52, 50));
+        setBackground(new java.awt.Color(51, 51, 51));
+        setForeground(java.awt.Color.darkGray);
         setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(196, 229, 204));
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("STUDENT INFORMATION");
 
-        lastName.setBackground(new java.awt.Color(255, 255, 255));
-        lastName.setForeground(new java.awt.Color(0, 0, 0));
-        lastName.setText("Last Name");
-        lastName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lastNameActionPerformed(evt);
-            }
-        });
-
-        lastNameLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        lastNameLabel.setForeground(new java.awt.Color(0, 0, 0));
-        lastNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lastNameLabel.setText("Last Name");
-
-        firstName.setBackground(new java.awt.Color(255, 255, 255));
-        firstName.setForeground(new java.awt.Color(0, 0, 0));
-        firstName.setText("First Name");
-        firstName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstNameActionPerformed(evt);
-            }
-        });
-
-        firstNameLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        firstNameLabel.setForeground(new java.awt.Color(0, 0, 0));
-        firstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        firstNameLabel.setText("First Name");
-
-        middleName.setBackground(new java.awt.Color(255, 255, 255));
-        middleName.setForeground(new java.awt.Color(0, 0, 0));
-        middleName.setText("Middle Name");
-        middleName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                middleNameActionPerformed(evt);
-            }
-        });
-
-        middleNameLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        middleNameLabel.setForeground(new java.awt.Color(0, 0, 0));
-        middleNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        middleNameLabel.setText("Middle Name");
-
-        suffix.setBackground(new java.awt.Color(255, 255, 255));
-        suffix.setForeground(new java.awt.Color(0, 0, 0));
-        suffix.setText("Suffix");
-        suffix.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                suffixActionPerformed(evt);
-            }
-        });
-
-        suffixLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
-        suffixLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        suffixLabel.setText("Suffix");
-
-        age.setBackground(new java.awt.Color(255, 255, 255));
-        age.setForeground(new java.awt.Color(0, 0, 0));
-        age.setText("Age");
-        age.setPreferredSize(new java.awt.Dimension(79, 25));
-        age.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ageActionPerformed(evt);
-            }
-        });
-
-        ageLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        ageLabel.setForeground(new java.awt.Color(0, 0, 0));
-        ageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ageLabel.setText("Birth place");
-
-        birthPlace.setBackground(new java.awt.Color(255, 255, 255));
-        birthPlace.setForeground(new java.awt.Color(0, 0, 0));
-        birthPlace.setText("Birth Place");
-        birthPlace.setPreferredSize(new java.awt.Dimension(79, 25));
-        birthPlace.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                birthPlaceActionPerformed(evt);
-            }
-        });
-
-        ageLabel1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        ageLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        ageLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ageLabel1.setText("Age");
-
-        yearLevel.setBackground(new java.awt.Color(255, 255, 255));
-        yearLevel.setForeground(new java.awt.Color(0, 0, 0));
-        yearLevel.setText("Year Level");
-        yearLevel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                yearLevelActionPerformed(evt);
-            }
-        });
-
-        yearLevelLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        yearLevelLabel.setForeground(new java.awt.Color(0, 0, 0));
-        yearLevelLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        yearLevelLabel.setText("Year Level");
-
-        courseDropDown.setBackground(new java.awt.Color(255, 255, 255));
-        courseDropDown.setForeground(new java.awt.Color(0, 0, 0));
-        courseDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Course", "Test 1", "Test 2", "Test 3" }));
-        courseDropDown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                courseDropDownActionPerformed(evt);
-            }
-        });
-
-        courseLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        courseLabel.setForeground(new java.awt.Color(0, 0, 0));
-        courseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        courseLabel.setText("Course");
-
-        studentNumber.setBackground(new java.awt.Color(255, 255, 255));
-        studentNumber.setForeground(new java.awt.Color(0, 0, 0));
-        studentNumber.setText("LRN");
-        studentNumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studentNumberActionPerformed(evt);
-            }
-        });
-
-        studentNumberLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        studentNumberLabel.setForeground(new java.awt.Color(0, 0, 0));
-        studentNumberLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        studentNumberLabel.setText("LRN");
-
-        submitButton.setBackground(new java.awt.Color(0, 128, 55));
-        submitButton.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        submitButton.setForeground(new java.awt.Color(255, 255, 255));
-        submitButton.setText("Submit");
-        submitButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitButtonActionPerformed(evt);
-            }
-        });
-
-        clearAllButton.setBackground(new java.awt.Color(29, 185, 196));
-        clearAllButton.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        clearAllButton.setForeground(new java.awt.Color(255, 255, 255));
-        clearAllButton.setText("Clear all");
-        clearAllButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearAllButtonActionPerformed(evt);
-            }
-        });
-
-        cancelButton.setBackground(new java.awt.Color(196, 29, 29));
-        cancelButton.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancel");
-        cancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelButtonActionPerformed(evt);
-            }
-        });
-
-        jPanel1.setBackground(new java.awt.Color(49, 52, 50));
-
-        Title.setFont(new java.awt.Font("sansserif", 1, 48)); // NOI18N
-        Title.setForeground(new java.awt.Color(255, 255, 255));
-        Title.setText("STUDENT REGISTRATION");
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 428, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 552, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(Title)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Title)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(lastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(firstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(163, 163, 163)
-                .addComponent(middleNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(122, 122, 122)
-                .addComponent(suffixLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(301, 301, 301)
-                        .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(ageLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(66, 66, 66)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(middleName, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(66, 66, 66)
-                        .addComponent(suffix, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(yearLevelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(195, 195, 195)
-                .addComponent(studentNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(courseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(147, 147, 147))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(yearLevel)
-                            .addComponent(lastName, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
-                            .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(cancelButton)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(studentNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addComponent(courseDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(birthPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 727, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(clearAllButton)
-                        .addGap(30, 30, 30)
-                        .addComponent(submitButton)
-                        .addGap(47, 47, 47))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(firstNameLabel)
-                            .addComponent(lastNameLabel)
-                            .addComponent(middleNameLabel)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(suffixLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(firstName, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(middleName, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(suffix, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(lastName, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ageLabel)
-                    .addComponent(ageLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(birthPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 17, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(yearLevelLabel)
-                    .addComponent(courseLabel)
-                    .addComponent(studentNumberLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(yearLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(courseDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(studentNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(83, 83, 83)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitButton)
-                    .addComponent(clearAllButton)
-                    .addComponent(cancelButton))
-                .addGap(87, 87, 87))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 136, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_cancelButtonActionPerformed
-
-    private void clearAllButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearAllButtonActionPerformed
-
-    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_submitButtonActionPerformed
-
-    private void studentNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentNumberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_studentNumberActionPerformed
-
-    private void courseDropDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_courseDropDownActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_courseDropDownActionPerformed
-
-    private void yearLevelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearLevelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_yearLevelActionPerformed
-
-    private void birthPlaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthPlaceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_birthPlaceActionPerformed
-
-    private void ageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ageActionPerformed
-
-    private void suffixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suffixActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_suffixActionPerformed
-
-    private void middleNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middleNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_middleNameActionPerformed
-
-    private void firstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_firstNameActionPerformed
-
-    private void lastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lastNameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -452,29 +128,8 @@ public class StudentPanel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Title;
-    private javax.swing.JTextField age;
-    private javax.swing.JLabel ageLabel;
-    private javax.swing.JLabel ageLabel1;
-    private javax.swing.JTextField birthPlace;
-    private javax.swing.JButton cancelButton;
-    private javax.swing.JButton clearAllButton;
-    private javax.swing.JComboBox<String> courseDropDown;
-    private javax.swing.JLabel courseLabel;
-    private javax.swing.JTextField firstName;
-    private javax.swing.JLabel firstNameLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField lastName;
-    private javax.swing.JLabel lastNameLabel;
-    private javax.swing.JTextField middleName;
-    private javax.swing.JLabel middleNameLabel;
-    private javax.swing.JTextField studentNumber;
-    private javax.swing.JLabel studentNumberLabel;
-    private javax.swing.JButton submitButton;
-    private javax.swing.JTextField suffix;
-    private javax.swing.JLabel suffixLabel;
-    private javax.swing.JTextField yearLevel;
-    private javax.swing.JLabel yearLevelLabel;
     // End of variables declaration//GEN-END:variables
 }
