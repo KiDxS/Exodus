@@ -8,6 +8,7 @@ import gr.student.registration.config.SQLDatabaseConnection;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -238,7 +239,10 @@ public class Main extends javax.swing.JFrame {
                 if((username.equals(uname)) && (password.equals(pass))) {
                     this.dispose();
                     mainMenu.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Username/Password is incorrect.", "Wrong Credentials", JOptionPane.ERROR_MESSAGE);
                 }
+                
             }
         
         }catch (SQLException e) {
