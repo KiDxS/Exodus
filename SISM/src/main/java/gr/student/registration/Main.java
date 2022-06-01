@@ -224,8 +224,27 @@ public class Main extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        mainMenu.setVisible(true);
+        try {
+            String username = usernameField.getText();
+            String password = new String(passwordField.getPassword());
+            
+            preparedStatement = connection.prepareStatement("SELECT * FROM users");
+            rs = preparedStatement.executeQuery();
+            
+            while(rs.next()){
+                String uname = rs.getString("username");
+                String pass = rs.getString("password");
+                
+                if((username.equals(uname)) && (password.equals(pass))) {
+                    this.dispose();
+                    mainMenu.setVisible(true);
+                }
+            }
+        
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
