@@ -5,6 +5,7 @@
 package gr.student.registration;
 
 import gr.student.registration.config.SQLDatabaseConnection;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,9 +27,10 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-
     }
     MainMenu mainMenu = new MainMenu();
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -106,6 +108,11 @@ public class Main extends javax.swing.JFrame {
                 usernameFieldActionPerformed(evt);
             }
         });
+        usernameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usernameFieldKeyPressed(evt);
+            }
+        });
 
         usernameLabel.setBackground(new java.awt.Color(0, 0, 0));
         usernameLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -125,7 +132,6 @@ public class Main extends javax.swing.JFrame {
         loginButton.setBorder(null);
         loginButton.setBorderPainted(false);
         loginButton.setFocusPainted(false);
-        loginButton.setFocusable(false);
         loginButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +146,11 @@ public class Main extends javax.swing.JFrame {
         passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordFieldActionPerformed(evt);
+            }
+        });
+        passwordField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passwordFieldKeyPressed(evt);
             }
         });
 
@@ -254,6 +265,20 @@ public class Main extends javax.swing.JFrame {
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void usernameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameFieldKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            loginButton.doClick();
+        }
+    }//GEN-LAST:event_usernameFieldKeyPressed
+
+    private void passwordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordFieldKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            loginButton.doClick();
+        }
+    }//GEN-LAST:event_passwordFieldKeyPressed
 
     /**
      * @param args the command line arguments
