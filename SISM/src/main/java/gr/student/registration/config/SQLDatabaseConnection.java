@@ -13,7 +13,7 @@ public class SQLDatabaseConnection {
     // Function call to initialize a connection to the mysql database
     public Connection initializeConnection(String database) {
         try {
-            final String DB_URL = String.format("jdbc:mysql://13.73.18.186/%s", database);
+            final String DB_URL = String.format("jdbc:mysql://20.243.51.244/%s", database);
             final String USER = "admin"; // Change this to the username of your mysql user.
             final String PASS = "DckVFuTu3Th5"; // Change this to the password of your mysql user
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
