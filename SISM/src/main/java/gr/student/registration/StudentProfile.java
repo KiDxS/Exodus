@@ -71,55 +71,56 @@ public class StudentProfile extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setForeground(new java.awt.Color(0, 0, 0));
 
-        lrnLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lrnLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lrnLabel.setForeground(new java.awt.Color(0, 0, 0));
-        lrnLabel.setText("LRN");
+        lrnLabel.setText("LRN:");
 
-        birthdateLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        birthdateLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         birthdateLabel.setForeground(new java.awt.Color(0, 0, 0));
         birthdateLabel.setText("Birthdate:");
 
-        ageLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ageLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         ageLabel.setForeground(new java.awt.Color(0, 0, 0));
         ageLabel.setText("Age:");
 
         lastNameLabel.setBackground(new java.awt.Color(0, 0, 0));
-        lastNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lastNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lastNameLabel.setForeground(new java.awt.Color(0, 0, 0));
         lastNameLabel.setText("Last Name:");
 
-        yearLevelLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        yearLevelLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         yearLevelLabel.setForeground(new java.awt.Color(0, 0, 0));
         yearLevelLabel.setText("Year Level:");
 
-        firstNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        firstNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         firstNameLabel.setForeground(new java.awt.Color(0, 0, 0));
         firstNameLabel.setText("First Name:");
 
-        midNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        midNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         midNameLabel.setForeground(new java.awt.Color(0, 0, 0));
         midNameLabel.setText("Middle Name:");
 
-        courseLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        courseLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         courseLabel.setForeground(new java.awt.Color(0, 0, 0));
         courseLabel.setText("Course:");
 
-        studentNoLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        studentNoLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         studentNoLabel.setForeground(new java.awt.Color(0, 0, 0));
         studentNoLabel.setText("Student No:");
 
-        sexLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        sexLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         sexLabel.setForeground(new java.awt.Color(0, 0, 0));
         sexLabel.setText("Sex:");
 
-        birthPlaceLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        birthPlaceLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         birthPlaceLabel.setForeground(new java.awt.Color(0, 0, 0));
         birthPlaceLabel.setText("Birthplace:");
 
-        suffixLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        suffixLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
         suffixLabel.setText("Suffix");
 
+        LastNameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         LastNameLabel.setText("Last Name");
 
         FirstNameLabel.setText("First Name");
@@ -150,43 +151,43 @@ public class StudentProfile extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(YearLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(CourseLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(LastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(FirstNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(yearLevelLabel)
-                        .addGap(119, 119, 119)
-                        .addComponent(courseLabel))
-                    .addComponent(lrnLabel)
-                    .addComponent(studentNoLabel)
-                    .addComponent(birthPlaceLabel)
-                    .addComponent(birthdateLabel)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(ageLabel)
-                        .addGap(157, 157, 157)
-                        .addComponent(sexLabel))
-                    .addComponent(firstNameLabel)
-                    .addComponent(lastNameLabel)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(AgeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SexLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(FirstNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lrnLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(studentNoLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(birthPlaceLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(birthdateLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(firstNameLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lastNameLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(midNameLabel)
                             .addComponent(MiddleNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(suffixLabel)
-                            .addComponent(SuffixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)))
-                    .addComponent(BirthDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BirthPlaceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(StudentNoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(LRNLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(SuffixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(BirthDateLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BirthPlaceLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(StudentNoLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LRNLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ageLabel)
+                            .addComponent(AgeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sexLabel)
+                            .addComponent(SexLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(LastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(YearLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(yearLevelLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(courseLabel)
+                            .addComponent(CourseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -240,7 +241,7 @@ public class StudentProfile extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CourseLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(YearLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84))
+                .addContainerGap())
         );
 
         jScrollPane2.setViewportView(jPanel3);
@@ -269,21 +270,21 @@ public class StudentProfile extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(122, 122, 122))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(121, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(122, 122, 122))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
                         .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,12 +292,12 @@ public class StudentProfile extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
