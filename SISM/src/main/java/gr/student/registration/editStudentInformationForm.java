@@ -8,12 +8,12 @@ package gr.student.registration;
  *
  * @author shin
  */
-public class addStudentForm extends javax.swing.JFrame {
+public class editStudentInformationForm extends javax.swing.JFrame {
 
     /**
      * Creates new form StudentPanel
      */
-    public addStudentForm() {
+    public editStudentInformationForm() {
         initComponents();
     }
 
@@ -44,7 +44,6 @@ public class addStudentForm extends javax.swing.JFrame {
         yearLevelField = new javax.swing.JTextField();
         courseLabel = new javax.swing.JLabel();
         birthPlaceField = new javax.swing.JTextField();
-        studentNoLabel = new javax.swing.JLabel();
         sexLabel = new javax.swing.JLabel();
         birthPlaceLabel = new javax.swing.JLabel();
         birthDateField = new javax.swing.JTextField();
@@ -52,7 +51,6 @@ public class addStudentForm extends javax.swing.JFrame {
         suffixLabel = new javax.swing.JLabel();
         lastNameField = new javax.swing.JTextField();
         firstNameField = new javax.swing.JTextField();
-        studentNoField = new javax.swing.JTextField();
         ageField = new javax.swing.JTextField();
         suffixField = new javax.swing.JTextField();
         cancelButton = new javax.swing.JButton();
@@ -68,7 +66,7 @@ public class addStudentForm extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ADD STUDENT INFORMATION");
+        jLabel1.setText("EDIT STUDENT INFORMATION");
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -106,9 +104,6 @@ public class addStudentForm extends javax.swing.JFrame {
         courseLabel.setForeground(new java.awt.Color(0, 0, 0));
         courseLabel.setText("Course:");
 
-        studentNoLabel.setForeground(new java.awt.Color(0, 0, 0));
-        studentNoLabel.setText("Student No:");
-
         sexLabel.setForeground(new java.awt.Color(0, 0, 0));
         sexLabel.setText("Sex:");
 
@@ -145,7 +140,6 @@ public class addStudentForm extends javax.swing.JFrame {
                             .addGap(119, 119, 119)
                             .addComponent(courseLabel))
                         .addComponent(lrnLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(studentNoLabel, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(birthPlaceLabel, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(birthdateLabel, javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
@@ -159,7 +153,6 @@ public class addStudentForm extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(courseField, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
                         .addComponent(LRNField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(studentNoField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(birthPlaceField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(firstNameField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(lastNameField, javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,11 +198,7 @@ public class addStudentForm extends javax.swing.JFrame {
                 .addComponent(birthPlaceLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(birthPlaceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(studentNoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studentNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(74, 74, 74)
                 .addComponent(lrnLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LRNField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -269,16 +258,16 @@ public class addStudentForm extends javax.swing.JFrame {
                         .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(60, 60, 60)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(8, 8, 8)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -350,21 +339,23 @@ public class addStudentForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(addStudentForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editStudentInformationForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(addStudentForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editStudentInformationForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(addStudentForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editStudentInformationForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(addStudentForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(editStudentInformationForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new addStudentForm().setVisible(true);
+                new editStudentInformationForm().setVisible(true);
             }
         });
     }
@@ -394,8 +385,6 @@ public class addStudentForm extends javax.swing.JFrame {
     private javax.swing.JTextField middleNameLabel;
     private javax.swing.JTextField sexField;
     private javax.swing.JLabel sexLabel;
-    private javax.swing.JTextField studentNoField;
-    private javax.swing.JLabel studentNoLabel;
     private javax.swing.JButton submitButton;
     private javax.swing.JTextField suffixField;
     private javax.swing.JLabel suffixLabel;
