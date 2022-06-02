@@ -23,12 +23,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -44,23 +47,20 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jScrollPane2" alignment="0" min="-2" pref="399" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="cancelButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="saveButton" min="-2" pref="81" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" pref="452" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="cancelButton" min="-2" pref="94" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="saveButton" min="-2" pref="94" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -71,13 +71,13 @@
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="431" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="saveButton" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="cancelButton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="443" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="saveButton" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="cancelButton" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="11" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -114,57 +114,53 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="courseLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="yearLevelLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="CourseLabel" alignment="0" pref="416" max="32767" attributes="0"/>
+                                      <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LRNLabel" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="CourseLabel" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="FirstNameLabel" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="BirthDateLabel" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="BirthPlaceLabel" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="StudentNoLabel" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="LRNLabel" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="MiddleNameLabel" alignment="1" max="32767" attributes="0"/>
-                                                          <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="AgeLabel" alignment="1" pref="167" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="midNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="suffixLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="sexLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="SuffixLabel" alignment="0" pref="113" max="32767" attributes="0"/>
-                                                      <Component id="SexLabel" alignment="0" max="32767" attributes="0"/>
-                                                  </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="MiddleNameLabel" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="AgeLabel" alignment="1" pref="167" max="32767" attributes="0"/>
                                               </Group>
-                                              <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="studentNoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="birthPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="YearLevel" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                                              <Component id="midNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="53" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="suffixLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="sexLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="SuffixLabel" alignment="0" pref="113" max="32767" attributes="0"/>
+                                              <Component id="SexLabel" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Component id="LastNameLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="studentNoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="birthPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="YearLevel" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="StudentNoLabel" alignment="0" pref="416" max="32767" attributes="0"/>
+                                          <Component id="BirthPlaceLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="BirthDateLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FirstNameLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LastNameLabel" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                  <EmptySpace pref="18" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -201,15 +197,15 @@
                               <Component id="SexLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="AgeLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Component id="birthdateLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="BirthDateLabel" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="BirthDateLabel" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="birthPlaceLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="BirthPlaceLabel" min="-2" pref="22" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="studentNoLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="StudentNoLabel" min="-2" pref="22" max="-2" attributes="0"/>
@@ -217,7 +213,7 @@
                           <Component id="lrnLabel" min="-2" pref="16" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="LRNLabel" min="-2" pref="22" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="yearLevelLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="YearLevel" min="-2" pref="24" max="-2" attributes="0"/>
