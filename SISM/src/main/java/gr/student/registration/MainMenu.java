@@ -1,5 +1,11 @@
 package gr.student.registration;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
+import java.sql.*;
+import gr.student.registration.config.SQLDatabaseConnection;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -10,12 +16,17 @@ package gr.student.registration;
  * @author shin
  */
 public class MainMenu extends javax.swing.JFrame {
+    SQLDatabaseConnection sqlConnection = new SQLDatabaseConnection();
+    Connection connection = sqlConnection.initializeConnection("exodus");
+    PreparedStatement preparedStatement;
+    ResultSet rs;
 
     /**
      * Creates new form Main
      */
     public MainMenu() {
         initComponents();
+        Fetch();
     }
 
     addStudentForm addStudentPanel = new addStudentForm();
@@ -48,6 +59,11 @@ public class MainMenu extends javax.swing.JFrame {
         addButton.setForeground(new java.awt.Color(255, 255, 255));
         addButton.setText("Add");
         addButton.setBorderPainted(false);
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
 
         deleteButton.setBackground(java.awt.Color.red);
         deleteButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -67,7 +83,6 @@ public class MainMenu extends javax.swing.JFrame {
         table.setForeground(new java.awt.Color(0, 0, 0));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Shen XIN",  new Integer(22)},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -155,6 +170,45 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    
+    private void Fetch() {
+        try {
+            int quantityOfColumns;
+            preparedStatement = connection.prepareStatement("SELECT * FROM students"); 
+            rs = preparedStatement.executeQuery();
+            ResultSetMetaData resultSetMetaData = rs.getMetaData();
+            quantityOfColumns = resultSetMetaData.getColumnCount();
+            System.out.println(quantityOfColumns);
+            DefaultTableModel df = (DefaultTableModel)table.getModel();
+            df.setRowCount(0);
+            while(rs.next()) {
+                Vector vector = new Vector();
+                for(int index=1; index<=quantityOfColumns; index++) {
+                    String firstName = rs.getString("First Name");
+                    String middleName = rs.getString("Middle Name");
+                    String lastName = rs.getString("Last Name");
+                    String suffix = rs.getString("Suffix");
+                    String fullName;
+                    int studentId = rs.getInt("Student ID");
+                    if(suffix.equals("NA")) {
+                        fullName = String.format("%s %s %s", firstName, middleName, lastName);
+                    } else {
+                        fullName = String.format("%s %s %s %s", firstName, middleName, lastName, suffix);
+                    }
+                    vector.add(fullName);
+                    vector.add(studentId);
+                }
+                df.addRow(vector);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    
+    }
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addButtonActionPerformed
 
     /**
      * @param args the command line arguments
