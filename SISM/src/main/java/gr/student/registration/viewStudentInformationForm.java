@@ -59,6 +59,7 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
         saveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("EXODUS - View Student Profile");
 
         jPanel1.setBackground(new java.awt.Color(39, 43, 48));
 
