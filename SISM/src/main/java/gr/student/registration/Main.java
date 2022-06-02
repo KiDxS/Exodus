@@ -54,7 +54,7 @@ public class Main extends javax.swing.JFrame {
         passwordField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Exodus - Login Form");
+        setTitle("EXODUS - Login Form");
         setMinimumSize(new java.awt.Dimension(1000, 500));
         setResizable(false);
 
