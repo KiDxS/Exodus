@@ -29,7 +29,7 @@ public class MainMenu extends javax.swing.JFrame {
         Fetch();
     }
 
-    addStudentForm addStudentPanel = new addStudentForm();
+    addStudentForm addStudentForm = new addStudentForm();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -208,6 +208,7 @@ public class MainMenu extends javax.swing.JFrame {
     }
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
+        addStudentForm.setVisible(true);
     }//GEN-LAST:event_addButtonActionPerformed
 
     /**

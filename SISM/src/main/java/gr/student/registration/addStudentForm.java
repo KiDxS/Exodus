@@ -4,12 +4,19 @@
  */
 package gr.student.registration;
 
+import java.sql.*;
+import gr.student.registration.config.SQLDatabaseConnection;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author shin
  */
 public class addStudentForm extends javax.swing.JFrame {
-
+    SQLDatabaseConnection sqlConnection = new SQLDatabaseConnection();
+    Connection connection = sqlConnection.initializeConnection("exodus");
+    PreparedStatement preparedStatement;
+    ResultSet rs;
     /**
      * Creates new form StudentPanel
      */
@@ -249,6 +256,11 @@ public class addStudentForm extends javax.swing.JFrame {
         submitButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitButton.setForeground(new java.awt.Color(255, 255, 255));
         submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -333,6 +345,48 @@ public class addStudentForm extends javax.swing.JFrame {
     private void yearComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_yearComboBoxActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        // TODO add your handling code here:
+        String lastName = lastNameField.getText();
+        String firstName = firstNameField.getText();
+        String middleName = middleNameLabel.getText();
+        String suffix = suffixField.getText();
+        String age = ageField.getText();
+        String birthDate = birthDateField.getText(); 
+        String birthPlace = birthPlaceLabel.getText();
+        String LRN = LRNField.getText();
+        String sex = sexComboBox.getSelectedItem().toString();
+        String yearLevel = yearComboBox.getSelectedItem().toString();
+        String course = courseComboBox.getSelectedItem().toString();
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO `students` (`Student ID`, `First Name`, `Middle Name`, `Last Name`, `Suffix`, `Age`, `Birthdate`, `Birthplace`, `LRN`, `Year Level`, `Course`, `Sex`) VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?)");
+            preparedStatement.setString(1, firstName);
+            preparedStatement.setString(2, middleName);
+            preparedStatement.setString(3, lastName);
+            preparedStatement.setString(4, suffix);
+            preparedStatement.setString(5, age);
+            preparedStatement.setString(6, birthDate);
+            preparedStatement.setString(7, birthPlace);
+            preparedStatement.setString(8, LRN);
+            preparedStatement.setString(9, yearLevel);
+            preparedStatement.setString(10, course);
+            preparedStatement.setString(11, sex);
+            int statusCode = preparedStatement.executeUpdate();
+            
+            if(statusCode == 1) {
+                JOptionPane.showMessageDialog(this, "Student has been added successfuly.");
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(this, "An error has occured while adding the student.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+        
+    }//GEN-LAST:event_submitButtonActionPerformed
 
     /**
      * @param args the command line arguments
