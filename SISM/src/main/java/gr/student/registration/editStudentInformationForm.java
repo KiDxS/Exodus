@@ -57,6 +57,7 @@ public class editStudentInformationForm extends javax.swing.JFrame {
         submitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("EXODUS - Edit Student Profile");
         setBackground(new java.awt.Color(39, 43, 48));
         setForeground(java.awt.Color.darkGray);
         setResizable(false);
