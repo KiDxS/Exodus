@@ -10,12 +10,12 @@ import javax.swing.table.DefaultTableModel;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author shin
  */
 public class MainMenu extends javax.swing.JFrame {
+
     SQLDatabaseConnection sqlConnection = new SQLDatabaseConnection();
     Connection connection = sqlConnection.initializeConnection("exodus");
     PreparedStatement preparedStatement;
@@ -29,7 +29,6 @@ public class MainMenu extends javax.swing.JFrame {
         Fetch();
     }
 
-    addStudentForm addStudentPanel = new addStudentForm();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -170,28 +169,27 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
-    
-    private void Fetch() {
+
+    public void Fetch() {
         try {
             int quantityOfColumns;
-            preparedStatement = connection.prepareStatement("SELECT * FROM students"); 
+            preparedStatement = connection.prepareStatement("SELECT * FROM students");
             rs = preparedStatement.executeQuery();
             ResultSetMetaData resultSetMetaData = rs.getMetaData();
             quantityOfColumns = resultSetMetaData.getColumnCount();
             System.out.println(quantityOfColumns);
-            DefaultTableModel df = (DefaultTableModel)table.getModel();
+            DefaultTableModel df = (DefaultTableModel) table.getModel();
             df.setRowCount(0);
-            while(rs.next()) {
+            while (rs.next()) {
                 Vector vector = new Vector();
-                for(int index=1; index<=quantityOfColumns; index++) {
+                for (int index = 1; index <= quantityOfColumns; index++) {
                     String firstName = rs.getString("First Name");
                     String middleName = rs.getString("Middle Name");
                     String lastName = rs.getString("Last Name");
                     String suffix = rs.getString("Suffix");
                     String fullName;
                     int studentId = rs.getInt("Student ID");
-                    if(suffix.equals("NA")) {
+                    if (suffix.equals("NA")) {
                         fullName = String.format("%s %s %s", firstName, middleName, lastName);
                     } else {
                         fullName = String.format("%s %s %s %s", firstName, middleName, lastName, suffix);
@@ -201,13 +199,18 @@ public class MainMenu extends javax.swing.JFrame {
                 }
                 df.addRow(vector);
             }
-        } catch(SQLException e) {
+            df.fireTableDataChanged();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-    
+
     }
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
+          addStudentForm diag = new addStudentForm(this, true);
+          diag.setVisible(true);
+//        testDialog diag = new testDialog(this, true);
+//        diag.setVisible(true);
     }//GEN-LAST:event_addButtonActionPerformed
 
     /**

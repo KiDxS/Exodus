@@ -1,5 +1,6 @@
-/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/Student-Registration/src/main/java/gr/student/registration/SQLDatabaseConnection.java
-/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/Student-Registration/src/main/java/gr/student/registration/MainMenu.java
-/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/Student-Registration/src/main/java/gr/student/registration/test.java
-/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/Student-Registration/src/main/java/gr/student/registration/Main.java
-/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/Student-Registration/src/main/java/gr/student/registration/StudentPanel.java
+/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/SISM/src/main/java/gr/student/registration/viewStudentInformationForm.java
+/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/SISM/src/main/java/gr/student/registration/Main.java
+/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/SISM/src/main/java/gr/student/registration/config/SQLDatabaseConnection.java
+/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/SISM/src/main/java/gr/student/registration/editStudentInformationForm.java
+/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/SISM/src/main/java/gr/student/registration/MainMenu.java
+/home/shin/Documents/CP2/Student-Information-Management-System-Finals-/SISM/src/main/java/gr/student/registration/addStudentForm.java
