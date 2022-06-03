@@ -56,6 +56,12 @@ public class editStudentInformationForm extends javax.swing.JFrame {
         sexComboBox = new javax.swing.JComboBox<>();
         yearComboBox = new javax.swing.JComboBox<>();
         courseComboBox = new javax.swing.JComboBox<>();
+        baranggayLabel = new javax.swing.JLabel();
+        baranggayField = new javax.swing.JTextField();
+        cityLabel = new javax.swing.JLabel();
+        cityField = new javax.swing.JTextField();
+        contactLabel = new javax.swing.JLabel();
+        contactField = new javax.swing.JTextField();
         cancelButton = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
 
@@ -133,6 +139,21 @@ public class editStudentInformationForm extends javax.swing.JFrame {
 
         courseComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BS in Information Technology (BSIT)", "BS in Information System (BSIS)", "BS in Agro-Forestry (BSAF)", "BS in Fisheries and Aquatic Sciences (BSFAS)", "BS in Food Technology (BSFT)", "BS in Marine Biology (BSMB)", "Bachelor of Public Administration (BPA)", "BS in Disaster Resiliency and Management (BSDRM)", "BS in Entrepreneurship (BS ENTREP)", "BS in Social Work (BSSW)", "BS in Tourism Management (BSTM)", "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Secondary Education (BSeD)", "Bachelor of Technology and Livelihood Education (BTLEd)" }));
 
+        baranggayLabel.setForeground(new java.awt.Color(0, 0, 0));
+        baranggayLabel.setText(" House no./ Street/ baranggay:");
+
+        cityLabel.setForeground(new java.awt.Color(0, 0, 0));
+        cityLabel.setText("City/municipality:");
+
+        contactLabel.setForeground(new java.awt.Color(0, 0, 0));
+        contactLabel.setText("Contact No:");
+
+        contactField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactFieldActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -172,7 +193,13 @@ public class editStudentInformationForm extends javax.swing.JFrame {
                             .addComponent(sexComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(courseLabel)
                     .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(baranggayLabel)
+                    .addComponent(baranggayField)
+                    .addComponent(cityLabel)
+                    .addComponent(cityField)
+                    .addComponent(contactLabel)
+                    .addComponent(contactField))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -203,6 +230,18 @@ public class editStudentInformationForm extends javax.swing.JFrame {
                     .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(baranggayLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(baranggayField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cityLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(contactLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contactField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(birthdateLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(birthDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -222,7 +261,7 @@ public class editStudentInformationForm extends javax.swing.JFrame {
                 .addComponent(courseLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(courseComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel3);
@@ -320,6 +359,10 @@ public class editStudentInformationForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cancelButtonActionPerformed
 
+    private void contactFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contactFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -362,11 +405,17 @@ public class editStudentInformationForm extends javax.swing.JFrame {
     private javax.swing.JTextField LRNField;
     private javax.swing.JTextField ageField;
     private javax.swing.JLabel ageLabel;
+    private javax.swing.JTextField baranggayField;
+    private javax.swing.JLabel baranggayLabel;
     private javax.swing.JTextField birthDateField;
     private javax.swing.JTextField birthPlaceField;
     private javax.swing.JLabel birthPlaceLabel;
     private javax.swing.JLabel birthdateLabel;
     private javax.swing.JButton cancelButton;
+    private javax.swing.JTextField cityField;
+    private javax.swing.JLabel cityLabel;
+    private javax.swing.JTextField contactField;
+    private javax.swing.JLabel contactLabel;
     private javax.swing.JComboBox<String> courseComboBox;
     private javax.swing.JLabel courseLabel;
     private javax.swing.JTextField firstNameField;
