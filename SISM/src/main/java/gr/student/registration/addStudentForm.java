@@ -416,6 +416,9 @@ public class addStudentForm extends javax.swing.JDialog {
         String sex = sexComboBox.getSelectedItem().toString();
         String yearLevel = yearComboBox.getSelectedItem().toString();
         String course = courseComboBox.getSelectedItem().toString();
+        String contactNumber = contactField.getText();
+        String address = baranggayField.getText();
+        String city = cityField.getText();
         try {
             Map<String, String> dictionary = new HashMap<String, String>(); // Creates a hashmap to store the fields.
             dictionary.put("Last Name", lastName);
@@ -424,13 +427,15 @@ public class addStudentForm extends javax.swing.JDialog {
             dictionary.put("Birth Date", birthDate);
             dictionary.put("Birth Place", birthPlace);
             dictionary.put("LRN", LRN);
+            dictionary.put("Contact Number", contactNumber);
+            dictionary.put("City", city);
             FieldValidators validator = new FieldValidators();
             
             // If the value returned is not 1 then continue
             // 1 = An error has occured
             // 0 = No error occured.
             if (validator.Validate(dictionary) != 1) { 
-                preparedStatement = connection.prepareStatement("INSERT INTO `students` (`Student ID`, `First Name`, `Middle Name`, `Last Name`, `Suffix`, `Age`, `Birthdate`, `Birthplace`, `LRN`, `Year Level`, `Course`, `Sex`) VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?)");
+                preparedStatement = connection.prepareStatement("INSERT INTO `students` (`Student ID`, `First Name`, `Middle Name`, `Last Name`, `Suffix`, `Age`, `Birthdate`, `Birthplace`, `LRN`, `Year Level`, `Course`, `Sex`, `Phone Number`) VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 preparedStatement.setString(1, firstName);
                 preparedStatement.setString(2, middleName);
                 preparedStatement.setString(3, lastName);
@@ -442,6 +447,9 @@ public class addStudentForm extends javax.swing.JDialog {
                 preparedStatement.setString(9, yearLevel);
                 preparedStatement.setString(10, course);
                 preparedStatement.setString(11, sex);
+                preparedStatement.setString(12, contactNumber);
+                preparedStatement.setString(13, city);
+                preparedStatement.setString(14, address);
                 int statusCode = preparedStatement.executeUpdate();
 
                 if (statusCode == 1) {
