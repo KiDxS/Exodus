@@ -189,17 +189,18 @@ public class MainMenu extends javax.swing.JFrame {
                     String suffix = rs.getString("Suffix");
                     String fullName;
                     int studentId = rs.getInt("Student ID");
-                    if (suffix.equals("NA")) {
-                        fullName = String.format("%s %s %s", firstName, middleName, lastName);
-                    } else {
-                        fullName = String.format("%s %s %s %s", firstName, middleName, lastName, suffix);
+                    
+                    if(suffix.equals("NA")){
+                        fullName = String.format("%s %s", firstName, lastName);
+                    } else{
+                        fullName = String.format("%s %s %s", firstName, lastName, suffix);
                     }
+                    
                     vector.add(fullName);
                     vector.add(studentId);
                 }
                 df.addRow(vector);
             }
-            df.fireTableDataChanged();
         } catch (SQLException e) {
             e.printStackTrace();
         }
