@@ -274,7 +274,7 @@ public class addStudentForm extends javax.swing.JDialog {
                 .addComponent(courseLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(courseComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel3);
@@ -385,6 +385,9 @@ public class addStudentForm extends javax.swing.JDialog {
         middleNameLabel.setText(null);
         suffixField.setText(null);
         ageField.setText(null);
+        baranggayField.setText(null);
+        cityField.setText(null);
+        contactField.setText(null);
         birthDateField.setText(null);
         birthPlaceField.setText(null);
         LRNField.setText(null);
