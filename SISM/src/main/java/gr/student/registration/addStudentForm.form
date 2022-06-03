@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="title" type="java.lang.String" value="EXODUS - Add Student Information"/>
@@ -128,49 +128,59 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="birthPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="LRNField" alignment="0" pref="413" max="32767" attributes="0"/>
-                              <Component id="birthPlaceField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="firstNameField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lastNameField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="birthDateField" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="midNameLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="middleNameLabel" max="32767" attributes="0"/>
-                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ageField" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                              <Component id="cityField" alignment="1" max="32767" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="sexLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="suffixField" pref="141" max="32767" attributes="0"/>
-                                      <Component id="suffixLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="sexComboBox" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="birthPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LRNField" alignment="0" pref="413" max="32767" attributes="0"/>
+                                      <Component id="birthPlaceField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="firstNameField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lastNameField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="birthDateField" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="midNameLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="middleNameLabel" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="ageField" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="sexLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="suffixField" pref="141" max="32767" attributes="0"/>
+                                              <Component id="suffixLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="sexComboBox" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="yearComboBox" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                      <Component id="courseComboBox" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="baranggayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="baranggayField" alignment="0" max="32767" attributes="0"/>
                                   </Group>
+                                  <Component id="cityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="yearComboBox" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                              <Component id="courseComboBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="contactLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="contactField" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="23" max="32767" attributes="0"/>
+                          <EmptySpace pref="21" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -206,6 +216,18 @@
                               <Component id="sexComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="baranggayLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="baranggayField" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="cityLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="cityField" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="contactLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="contactField" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Component id="birthdateLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="birthDateField" min="-2" max="-2" attributes="0"/>
@@ -225,7 +247,7 @@
                           <Component id="courseLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="courseComboBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="169" max="32767" attributes="0"/>
+                          <EmptySpace pref="215" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -401,6 +423,39 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="baranggayLabel">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="0" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="House no./ Street/ baranggay:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="baranggayField">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="baranggayFieldActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cityLabel">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="0" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="City/municipality:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cityField">
+                </Component>
+                <Component class="javax.swing.JLabel" name="contactLabel">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="0" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Contact No:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="contactField">
                 </Component>
               </SubComponents>
             </Container>

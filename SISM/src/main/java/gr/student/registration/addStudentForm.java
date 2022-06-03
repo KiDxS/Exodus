@@ -66,6 +66,12 @@ public class addStudentForm extends javax.swing.JDialog {
         sexComboBox = new javax.swing.JComboBox<>();
         yearComboBox = new javax.swing.JComboBox<>();
         courseComboBox = new javax.swing.JComboBox<>();
+        baranggayLabel = new javax.swing.JLabel();
+        baranggayField = new javax.swing.JTextField();
+        cityLabel = new javax.swing.JLabel();
+        cityField = new javax.swing.JTextField();
+        contactLabel = new javax.swing.JLabel();
+        contactField = new javax.swing.JTextField();
         cancelButton = new javax.swing.JButton();
         clearButton = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
@@ -144,6 +150,21 @@ public class addStudentForm extends javax.swing.JDialog {
 
         courseComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BS in Information Technology (BSIT)", "BS in Information System (BSIS)", "BS in Agro-Forestry (BSAF)", "BS in Fisheries and Aquatic Sciences (BSFAS)", "BS in Food Technology (BSFT)", "BS in Marine Biology (BSMB)", "Bachelor of Public Administration (BPA)", "BS in Disaster Resiliency and Management (BSDRM)", "BS in Entrepreneurship (BS ENTREP)", "BS in Social Work (BSSW)", "BS in Tourism Management (BSTM)", "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Secondary Education (BSeD)", "Bachelor of Technology and Livelihood Education (BTLEd)" }));
 
+        baranggayLabel.setForeground(new java.awt.Color(0, 0, 0));
+        baranggayLabel.setText("House no./ Street/ baranggay:");
+
+        baranggayField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                baranggayFieldActionPerformed(evt);
+            }
+        });
+
+        cityLabel.setForeground(new java.awt.Color(0, 0, 0));
+        cityLabel.setText("City/municipality:");
+
+        contactLabel.setForeground(new java.awt.Color(0, 0, 0));
+        contactLabel.setText("Contact No:");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -151,40 +172,48 @@ public class addStudentForm extends javax.swing.JDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(yearLevelLabel)
-                    .addComponent(lrnLabel)
-                    .addComponent(birthPlaceLabel)
-                    .addComponent(birthdateLabel)
-                    .addComponent(firstNameLabel)
-                    .addComponent(lastNameLabel)
-                    .addComponent(LRNField, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
-                    .addComponent(birthPlaceField)
-                    .addComponent(firstNameField)
-                    .addComponent(lastNameField)
-                    .addComponent(birthDateField)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(midNameLabel)
-                                    .addGap(117, 117, 117))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(middleNameLabel)
-                                    .addGap(25, 25, 25)))
+                    .addComponent(cityField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(yearLevelLabel)
+                            .addComponent(lrnLabel)
+                            .addComponent(birthPlaceLabel)
+                            .addComponent(birthdateLabel)
+                            .addComponent(firstNameLabel)
+                            .addComponent(lastNameLabel)
+                            .addComponent(LRNField, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
+                            .addComponent(birthPlaceField)
+                            .addComponent(firstNameField)
+                            .addComponent(lastNameField)
+                            .addComponent(birthDateField)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ageLabel)
-                                    .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(25, 25, 25)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(sexLabel)
-                            .addComponent(suffixField, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                            .addComponent(suffixLabel)
-                            .addComponent(sexComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(courseLabel)
-                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                            .addComponent(midNameLabel)
+                                            .addGap(117, 117, 117))
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                            .addComponent(middleNameLabel)
+                                            .addGap(25, 25, 25)))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(ageLabel)
+                                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(25, 25, 25)))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(sexLabel)
+                                    .addComponent(suffixField, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                                    .addComponent(suffixLabel)
+                                    .addComponent(sexComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(courseLabel)
+                            .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(baranggayLabel)
+                            .addComponent(baranggayField))
+                        .addComponent(cityLabel))
+                    .addComponent(contactLabel)
+                    .addComponent(contactField))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,6 +243,18 @@ public class addStudentForm extends javax.swing.JDialog {
                     .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(baranggayLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(baranggayField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cityLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9)
+                .addComponent(contactLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contactField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(birthdateLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(birthDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,7 +274,7 @@ public class addStudentForm extends javax.swing.JDialog {
                 .addComponent(courseLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(courseComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel3);
@@ -398,6 +439,10 @@ public class addStudentForm extends javax.swing.JDialog {
 
     }//GEN-LAST:event_submitButtonActionPerformed
 
+    private void baranggayFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baranggayFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_baranggayFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -445,12 +490,18 @@ public class addStudentForm extends javax.swing.JDialog {
     private javax.swing.JTextField LRNField;
     private javax.swing.JTextField ageField;
     private javax.swing.JLabel ageLabel;
+    private javax.swing.JTextField baranggayField;
+    private javax.swing.JLabel baranggayLabel;
     private javax.swing.JTextField birthDateField;
     private javax.swing.JTextField birthPlaceField;
     private javax.swing.JLabel birthPlaceLabel;
     private javax.swing.JLabel birthdateLabel;
     private javax.swing.JButton cancelButton;
+    private javax.swing.JTextField cityField;
+    private javax.swing.JLabel cityLabel;
     private javax.swing.JButton clearButton;
+    private javax.swing.JTextField contactField;
+    private javax.swing.JLabel contactLabel;
     private javax.swing.JComboBox<String> courseComboBox;
     private javax.swing.JLabel courseLabel;
     private javax.swing.JTextField firstNameField;
