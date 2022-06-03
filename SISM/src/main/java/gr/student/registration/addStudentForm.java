@@ -4,6 +4,9 @@
  */
 package gr.student.registration;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author shin
@@ -312,7 +315,12 @@ public class addStudentForm extends javax.swing.JFrame {
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
+        JFrame frame = new JFrame("Cancel");
+        if(JOptionPane.showConfirmDialog(frame,"Are you sure you want to cancel?", "CANCEL",
+                JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION)
+        {
+            this.dispose();
+        }
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
