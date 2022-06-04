@@ -429,6 +429,7 @@ public class addStudentForm extends javax.swing.JDialog {
             dictionary.put("LRN", LRN);
             dictionary.put("Contact Number", contactNumber);
             dictionary.put("City", city);
+            dictionary.put("Address", address);
             FieldValidators validator = new FieldValidators();
             
             // If the value returned is not 1 then continue
