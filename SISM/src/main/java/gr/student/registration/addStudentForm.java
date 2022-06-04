@@ -435,7 +435,7 @@ public class addStudentForm extends javax.swing.JDialog {
             // 1 = An error has occured
             // 0 = No error occured.
             if (validator.Validate(dictionary) != 1) { 
-                preparedStatement = connection.prepareStatement("INSERT INTO `students` (`Student ID`, `First Name`, `Middle Name`, `Last Name`, `Suffix`, `Age`, `Birthdate`, `Birthplace`, `LRN`, `Year Level`, `Course`, `Sex`, `Phone Number`) VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                preparedStatement = connection.prepareStatement("INSERT INTO `students` (`Student ID`, `First Name`, `Middle Name`, `Last Name`, `Suffix`, `Age`, `Birthdate`, `Birthplace`, `LRN`, `Year Level`, `Course`, `Sex`, `Contact Number`, `City`, `Address`) VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 preparedStatement.setString(1, firstName);
                 preparedStatement.setString(2, middleName);
                 preparedStatement.setString(3, lastName);
