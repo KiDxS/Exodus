@@ -46,7 +46,7 @@ public class addStudentForm extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
-        middleNameLabel = new javax.swing.JTextField();
+        middleNameField = new javax.swing.JTextField();
         lrnLabel = new javax.swing.JLabel();
         LRNField = new javax.swing.JTextField();
         birthdateLabel = new javax.swing.JLabel();
@@ -96,9 +96,9 @@ public class addStudentForm extends javax.swing.JDialog {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setForeground(new java.awt.Color(0, 0, 0));
 
-        middleNameLabel.addActionListener(new java.awt.event.ActionListener() {
+        middleNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                middleNameLabelActionPerformed(evt);
+                middleNameFieldActionPerformed(evt);
             }
         });
 
@@ -196,7 +196,7 @@ public class addStudentForm extends javax.swing.JDialog {
                                             .addComponent(midNameLabel)
                                             .addGap(117, 117, 117))
                                         .addGroup(jPanel3Layout.createSequentialGroup()
-                                            .addComponent(middleNameLabel)
+                                            .addComponent(middleNameField)
                                             .addGap(25, 25, 25)))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,7 +235,7 @@ public class addStudentForm extends javax.swing.JDialog {
                     .addComponent(suffixLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(middleNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(middleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -368,9 +368,9 @@ public class addStudentForm extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_firstNameFieldActionPerformed
 
-    private void middleNameLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middleNameLabelActionPerformed
+    private void middleNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middleNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_middleNameLabelActionPerformed
+    }//GEN-LAST:event_middleNameFieldActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
@@ -385,7 +385,7 @@ public class addStudentForm extends javax.swing.JDialog {
         // TODO add your handling code here:
         lastNameField.setText(null);
         firstNameField.setText(null);
-        middleNameLabel.setText(null);
+        middleNameField.setText(null);
         suffixField.setText(null);
         ageField.setText(null);
         baranggayField.setText(null);
@@ -407,11 +407,11 @@ public class addStudentForm extends javax.swing.JDialog {
         // TODO add your handling code here:
         String lastName = lastNameField.getText();
         String firstName = firstNameField.getText();
-        String middleName = middleNameLabel.getText();
+        String middleName = middleNameField.getText();
         String suffix = suffixField.getText();
         String age = ageField.getText();
         String birthDate = birthDateField.getText();
-        String birthPlace = birthPlaceLabel.getText();
+        String birthPlace = birthPlaceField.getText();
         String LRN = LRNField.getText();
         String sex = sexComboBox.getSelectedItem().toString();
         String yearLevel = yearComboBox.getSelectedItem().toString();
@@ -542,7 +542,7 @@ public class addStudentForm extends javax.swing.JDialog {
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JLabel lrnLabel;
     private javax.swing.JLabel midNameLabel;
-    private javax.swing.JTextField middleNameLabel;
+    private javax.swing.JTextField middleNameField;
     private javax.swing.JComboBox<String> sexComboBox;
     private javax.swing.JLabel sexLabel;
     private javax.swing.JButton submitButton;
