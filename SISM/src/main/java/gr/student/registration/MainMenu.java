@@ -1,11 +1,8 @@
 package gr.student.registration;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
 import java.sql.*;
 import gr.student.registration.config.SQLDatabaseConnection;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -23,7 +20,7 @@ public class MainMenu extends javax.swing.JFrame {
     Connection connection = sqlConnection.initializeConnection("exodus");
     PreparedStatement preparedStatement;
     ResultSet rs;
-
+    
     /**
      * Creates new form Main
      */
@@ -31,7 +28,7 @@ public class MainMenu extends javax.swing.JFrame {
         initComponents();
         Fetch();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -83,6 +80,11 @@ public class MainMenu extends javax.swing.JFrame {
         viewButton.setForeground(new java.awt.Color(255, 255, 255));
         viewButton.setText("View");
         viewButton.setBorderPainted(false);
+        viewButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewButtonActionPerformed(evt);
+            }
+        });
 
         table.getTableHeader().setBackground(new java.awt.Color(0,0,0));
         table.setBackground(new java.awt.Color(255, 255, 255));
@@ -177,10 +179,11 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     public void Fetch() {
         try {
             int quantityOfColumns;
+            
             preparedStatement = connection.prepareStatement("SELECT * FROM students");
             rs = preparedStatement.executeQuery();
             ResultSetMetaData resultSetMetaData = rs.getMetaData();
@@ -192,7 +195,6 @@ public class MainMenu extends javax.swing.JFrame {
                 Vector vector = new Vector();
                 for (int index = 1; index <= quantityOfColumns; index++) {
                     String firstName = rs.getString("First Name");
-                    String middleName = rs.getString("Middle Name");
                     String lastName = rs.getString("Last Name");
                     String suffix = rs.getString("Suffix");
                     String fullName;
@@ -216,10 +218,8 @@ public class MainMenu extends javax.swing.JFrame {
     }
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-        addStudentForm diag = new addStudentForm(this, true);
-        diag.setVisible(true);
-//        testDialog diag = new testDialog(this, true);
-//        diag.setVisible(true);
+        addStudentForm dialog = new addStudentForm(this, true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
@@ -250,6 +250,12 @@ public class MainMenu extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
+        // TODO add your handling code here:
+        viewStudentInformationForm dialog = new viewStudentInformationForm(this, true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_viewButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,7 +298,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton deleteButton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainMenuPanel;
-    private javax.swing.JTable table;
+    public javax.swing.JTable table;
     private javax.swing.JButton viewButton;
     // End of variables declaration//GEN-END:variables
 }

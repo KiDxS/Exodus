@@ -457,7 +457,6 @@ public class addStudentForm extends javax.swing.JDialog {
                 preparedStatement.setString(13, city);
                 preparedStatement.setString(14, address);
                 int statusCode = preparedStatement.executeUpdate();
-
                 if (statusCode == 1) {
                     JOptionPane.showMessageDialog(this, "Student has been added successfuly.");
                     frame.Fetch();
