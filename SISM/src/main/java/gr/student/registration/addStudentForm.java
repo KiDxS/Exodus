@@ -376,8 +376,7 @@ public class addStudentForm extends javax.swing.JDialog {
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
-        JFrame frame = new JFrame("Cancel");
-        if (JOptionPane.showConfirmDialog(frame, "Are you sure you want to cancel?", "CANCEL",
+        if (JOptionPane.showConfirmDialog(null, "Are you sure you want to cancel?", "CANCEL",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
             this.dispose();
         }
@@ -385,12 +384,11 @@ public class addStudentForm extends javax.swing.JDialog {
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
-        JFrame frame = new JFrame("Clear All");
-        if (JOptionPane.showConfirmDialog(frame, "Are you sure you want to clear all?", "CLEAR ALL",
+        if (JOptionPane.showConfirmDialog(null, "Are you sure you want to clear all?", "CLEAR ALL",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
             lastNameField.setText(null);
             firstNameField.setText(null);
-            middleNameLabel.setText(null);
+            middleNameField.setText(null);
             suffixField.setText(null);
             ageField.setText(null);
             baranggayField.setText(null);
