@@ -51,7 +51,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
             ResultSetMetaData resultSetMetaData = rs.getMetaData();
 
             if (rs.next()) {
-                int studentNumber = rs.getInt("Student ID");
+                String studentNumber = rs.getString("Student ID");
                 String firstName = rs.getString("First Name");
                 String lastName = rs.getString("Last Name");
                 String suffix = rs.getString("Suffix");
@@ -79,6 +79,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                 contactNumberData.setText(contactNumber);
                 cityData.setText(city);
                 addressData.setText(address);
+                studentNumberData.setText(studentNumber);
             }
 
         } catch (SQLException e) {
@@ -124,11 +125,11 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
         lrnData = new javax.swing.JLabel();
         yearLevelData = new javax.swing.JLabel();
         courseData = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        addressLabel = new javax.swing.JLabel();
         addressData = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        cityLabel = new javax.swing.JLabel();
         cityData = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        contactNumberLabel = new javax.swing.JLabel();
         contactNumberData = new javax.swing.JLabel();
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
@@ -197,63 +198,60 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
         suffixLabel.setText("Suffix");
 
         lastNameData.setBackground(new java.awt.Color(204, 0, 204));
-        lastNameData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lastNameData.setText("  Last Name");
-        lastNameData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lastNameData.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lastNameData.setText("Last Name");
+        lastNameData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        firstNameData.setText("  First Name");
-        firstNameData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        firstNameData.setText("First Name");
+        firstNameData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
         middleNameData.setText("Middle Name");
         middleNameData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 
-        suffixData.setText("  Suffix");
-        suffixData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        suffixData.setText("Suffix");
+        suffixData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        ageData.setText("  Age");
-        ageData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ageData.setText("Age");
+        ageData.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10))));
 
-        sexData.setText("  Sex");
-        sexData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        sexData.setText("Sex");
+        sexData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        birthDateData.setText("  Birthdate");
-        birthDateData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        birthDateData.setText(" Birthdate");
+        birthDateData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        birthPlaceData.setText("  Birthplace");
-        birthPlaceData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        birthPlaceData.setText("Birthplace");
+        birthPlaceData.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10))));
 
-        studentNumberData.setText("  Student Number");
-        studentNumberData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        studentNumberData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        lrnData.setText("  LRN");
-        lrnData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lrnData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        yearLevelData.setText("  Year Level");
-        yearLevelData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        yearLevelData.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10))));
 
         courseData.setText("  Course");
-        courseData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        courseData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("House no./ Street/ baranggay ");
+        addressLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        addressLabel.setForeground(new java.awt.Color(0, 0, 0));
+        addressLabel.setText("House no./ Street/ baranggay ");
 
-        addressData.setText("  House no./ Street/ baranggay ");
-        addressData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addressData.setText("House no./ Street/ baranggay ");
+        addressData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("City/municipality");
+        cityLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        cityLabel.setForeground(new java.awt.Color(0, 0, 0));
+        cityLabel.setText("City/municipality");
 
-        cityData.setText("  City/municipality");
-        cityData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cityData.setText("City/municipality");
+        cityData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Contact No:");
+        contactNumberLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        contactNumberLabel.setForeground(new java.awt.Color(0, 0, 0));
+        contactNumberLabel.setText("Contact No:");
 
-        contactNumberData.setText("  Contact No");
-        contactNumberData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        contactNumberData.setText("Contact No");
+        contactNumberData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -297,9 +295,9 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                             .addComponent(courseData, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
                             .addComponent(yearLevelLabel)
                             .addComponent(lrnData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
+                            .addComponent(addressLabel)
+                            .addComponent(cityLabel)
+                            .addComponent(contactNumberLabel)
                             .addComponent(addressData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cityData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(contactNumberData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -333,15 +331,15 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                     .addComponent(sexData, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ageData, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(addressLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addressData, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(cityLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cityData, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addComponent(contactNumberLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contactNumberData, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -502,6 +500,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel addressData;
+    private javax.swing.JLabel addressLabel;
     private javax.swing.JLabel ageData;
     private javax.swing.JLabel ageLabel;
     private javax.swing.JLabel birthDateData;
@@ -510,15 +509,14 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
     private javax.swing.JLabel birthdateLabel;
     private javax.swing.JButton cancelButton;
     private javax.swing.JLabel cityData;
+    private javax.swing.JLabel cityLabel;
     private javax.swing.JLabel contactNumberData;
+    private javax.swing.JLabel contactNumberLabel;
     private javax.swing.JLabel courseData;
     private javax.swing.JLabel courseLabel;
     private javax.swing.JLabel firstNameData;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;

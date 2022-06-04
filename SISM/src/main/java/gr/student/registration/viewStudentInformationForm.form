@@ -163,9 +163,9 @@
                                       <Component id="courseData" alignment="0" pref="416" max="32767" attributes="0"/>
                                       <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lrnData" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="addressLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="contactNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="addressData" alignment="0" max="32767" attributes="0"/>
                                       <Component id="cityData" alignment="0" max="32767" attributes="0"/>
                                       <Component id="contactNumberData" alignment="0" max="32767" attributes="0"/>
@@ -208,15 +208,15 @@
                               <Component id="ageData" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="addressData" min="-2" pref="35" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="cityLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="cityData" min="-2" pref="34" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="contactNumberLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="contactNumberData" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -390,22 +390,36 @@
                       <Color blue="cc" green="0" red="cc" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Arial" size="12" style="0"/>
+                      <Font name="SansSerif" size="13" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="  Last Name"/>
+                    <Property name="text" type="java.lang.String" value="Last Name"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="firstNameData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  First Name"/>
+                    <Property name="text" type="java.lang.String" value="First Name"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
@@ -429,80 +443,145 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="suffixData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Suffix"/>
+                    <Property name="text" type="java.lang.String" value="Suffix"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="ageData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Age"/>
+                    <Property name="text" type="java.lang.String" value="Age"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                            <CompoundBorder>
+                              <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder/>
+                              </Border>
+                              <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                                <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                              </Border>
+                            </CompoundBorder>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="sexData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Sex"/>
+                    <Property name="text" type="java.lang.String" value="Sex"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="birthDateData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Birthdate"/>
+                    <Property name="text" type="java.lang.String" value=" Birthdate"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="birthPlaceData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Birthplace"/>
+                    <Property name="text" type="java.lang.String" value="Birthplace"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                            <CompoundBorder>
+                              <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder/>
+                              </Border>
+                              <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                                <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                              </Border>
+                            </CompoundBorder>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="studentNumberData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Student Number"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lrnData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  LRN"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="yearLevelData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Year Level"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                            <CompoundBorder>
+                              <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                <LineBorder/>
+                              </Border>
+                              <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                                <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                              </Border>
+                            </CompoundBorder>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
@@ -511,13 +590,20 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Course"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="addressLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="12" style="1"/>
@@ -530,15 +616,22 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="addressData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  House no./ Street/ baranggay "/>
+                    <Property name="text" type="java.lang.String" value="House no./ Street/ baranggay "/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
+                <Component class="javax.swing.JLabel" name="cityLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="12" style="1"/>
@@ -551,15 +644,22 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="cityData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  City/municipality"/>
+                    <Property name="text" type="java.lang.String" value="City/municipality"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel6">
+                <Component class="javax.swing.JLabel" name="contactNumberLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="12" style="1"/>
@@ -572,10 +672,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="contactNumberData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Contact No"/>
+                    <Property name="text" type="java.lang.String" value="Contact No"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="10" right="10" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
