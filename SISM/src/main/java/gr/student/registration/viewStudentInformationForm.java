@@ -5,19 +5,86 @@
  */
 package gr.student.registration;
 
+import gr.student.registration.config.SQLDatabaseConnection;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author John Ryl Candelon
  */
-public class viewStudentInformationForm extends javax.swing.JFrame {
+public class viewStudentInformationForm extends javax.swing.JDialog {
+
+    MainMenu frame = new MainMenu();
+    SQLDatabaseConnection sqlConnection = new SQLDatabaseConnection();
+    Connection connection = sqlConnection.initializeConnection("exodus");
+    PreparedStatement preparedStatement;
+    ResultSet rs;
 
     /**
      * Creates new form StudentProfile
      */
-    public viewStudentInformationForm() {
+    public viewStudentInformationForm(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
+        frame = (MainMenu) parent;
+        Fetch();
+
+    }
+
+    private void Fetch() {
+        try {
+
+            DefaultTableModel df = (DefaultTableModel) frame.table.getModel();
+            int row = frame.table.getSelectedRow();
+            String studentId = df.getValueAt(row, 1).toString();
+            preparedStatement = connection.prepareStatement("SELECT * FROM `students` WHERE `Student ID` = ?");
+            preparedStatement.setString(1, studentId);
+            rs = preparedStatement.executeQuery();
+            ResultSetMetaData resultSetMetaData = rs.getMetaData();
+
+            if (rs.next()) {
+                int studentNumber = rs.getInt("Student ID");
+                String firstName = rs.getString("First Name");
+                String lastName = rs.getString("Last Name");
+                String suffix = rs.getString("Suffix");
+                String age = rs.getString("Age");
+                String birthDate = rs.getString("Birthdate");
+                String birthPlace = rs.getString("Birthplace");
+                String LRN = rs.getString("LRN");
+                String yearLevel = rs.getString("Year Level");
+                String course = rs.getString("Course");
+                String sex = rs.getString("Sex");
+                String contactNumber = rs.getString("Contact Number");
+                String city = rs.getString("City");
+                String address = rs.getString("Address");
+
+                firstNameData.setText(firstName);
+                lastNameData.setText(lastName);
+                suffixData.setText(suffix);
+                ageData.setText(age);
+                birthDateData.setText(birthDate);
+                birthPlaceData.setText(birthPlace);
+                lrnData.setText(LRN);
+                yearLevelData.setText(yearLevel);
+                courseData.setText(course);
+                sexData.setText(sex);
+                contactNumberData.setText(contactNumber);
+                cityData.setText(city);
+                addressData.setText(address);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     /**
@@ -45,28 +112,28 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
         sexLabel = new javax.swing.JLabel();
         birthPlaceLabel = new javax.swing.JLabel();
         suffixLabel = new javax.swing.JLabel();
-        LastNameLabel = new javax.swing.JLabel();
-        FirstNameLabel = new javax.swing.JLabel();
-        MiddleNameLabel = new javax.swing.JLabel();
-        SuffixLabel = new javax.swing.JLabel();
-        AgeLabel = new javax.swing.JLabel();
-        SexLabel = new javax.swing.JLabel();
-        BirthDateLabel = new javax.swing.JLabel();
-        BirthPlaceLabel = new javax.swing.JLabel();
-        StudentNoLabel = new javax.swing.JLabel();
-        LRNLabel = new javax.swing.JLabel();
-        YearLevel = new javax.swing.JLabel();
-        CourseLabel = new javax.swing.JLabel();
+        lastNameData = new javax.swing.JLabel();
+        firstNameData = new javax.swing.JLabel();
+        middleNameData = new javax.swing.JLabel();
+        suffixData = new javax.swing.JLabel();
+        ageData = new javax.swing.JLabel();
+        sexData = new javax.swing.JLabel();
+        birthDateData = new javax.swing.JLabel();
+        birthPlaceData = new javax.swing.JLabel();
+        studentNumberData = new javax.swing.JLabel();
+        lrnData = new javax.swing.JLabel();
+        yearLevelData = new javax.swing.JLabel();
+        courseData = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        addressData = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        cityData = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        contactNumberData = new javax.swing.JLabel();
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("EXODUS - View Student Profile");
 
         jPanel1.setBackground(new java.awt.Color(39, 43, 48));
@@ -129,64 +196,64 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
         suffixLabel.setText("Suffix");
 
-        LastNameLabel.setBackground(new java.awt.Color(204, 0, 204));
-        LastNameLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        LastNameLabel.setText("  Last Name");
-        LastNameLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lastNameData.setBackground(new java.awt.Color(204, 0, 204));
+        lastNameData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lastNameData.setText("  Last Name");
+        lastNameData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        FirstNameLabel.setText("  First Name");
-        FirstNameLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        firstNameData.setText("  First Name");
+        firstNameData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        MiddleNameLabel.setText("  Middle Name");
-        MiddleNameLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        middleNameData.setText("Middle Name");
+        middleNameData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 
-        SuffixLabel.setText("  Suffix");
-        SuffixLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        suffixData.setText("  Suffix");
+        suffixData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        AgeLabel.setText("  Age");
-        AgeLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ageData.setText("  Age");
+        ageData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        SexLabel.setText("  Sex");
-        SexLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        sexData.setText("  Sex");
+        sexData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        BirthDateLabel.setText("  Birthdate");
-        BirthDateLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        birthDateData.setText("  Birthdate");
+        birthDateData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        BirthPlaceLabel.setText("  Birthplace");
-        BirthPlaceLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        birthPlaceData.setText("  Birthplace");
+        birthPlaceData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        StudentNoLabel.setText("  Student Number");
-        StudentNoLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        studentNumberData.setText("  Student Number");
+        studentNumberData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        LRNLabel.setText("  LRN");
-        LRNLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lrnData.setText("  LRN");
+        lrnData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        YearLevel.setText("  Year Level");
-        YearLevel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        yearLevelData.setText("  Year Level");
+        yearLevelData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        CourseLabel.setText("  Course");
-        CourseLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        courseData.setText("  Course");
+        courseData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("House no./ Street/ baranggay ");
 
-        jLabel3.setText("  House no./ Street/ baranggay ");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addressData.setText("  House no./ Street/ baranggay ");
+        addressData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("City/municipality");
 
-        jLabel5.setText("  City/municipality");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cityData.setText("  City/municipality");
+        cityData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Contact No:");
 
-        jLabel7.setText("  Contact No");
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        contactNumberData.setText("  Contact No");
+        contactNumberData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -200,42 +267,42 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(MiddleNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(middleNameData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(ageLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(AgeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))
+                                        .addComponent(ageData, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))
                                     .addComponent(midNameLabel))
                                 .addGap(24, 24, 24)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(suffixLabel)
                                     .addComponent(sexLabel)
-                                    .addComponent(SuffixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                                    .addComponent(SexLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(suffixData, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                                    .addComponent(sexData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(lrnLabel)
                             .addComponent(studentNoLabel)
                             .addComponent(birthPlaceLabel)
                             .addComponent(birthdateLabel)
                             .addComponent(firstNameLabel)
                             .addComponent(lastNameLabel)
-                            .addComponent(YearLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(yearLevelData, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(StudentNoLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
-                                .addComponent(BirthPlaceLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BirthDateLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(FirstNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(studentNumberData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
+                                .addComponent(birthPlaceData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(birthDateData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(firstNameData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(courseLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(LastNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(lastNameData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap(18, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CourseLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
+                            .addComponent(courseData, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
                             .addComponent(yearLevelLabel)
-                            .addComponent(LRNLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lrnData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel4)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(addressData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cityData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(contactNumberData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -244,63 +311,63 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lastNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lastNameData, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(firstNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(firstNameData, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(midNameLabel)
                     .addComponent(suffixLabel))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MiddleNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SuffixLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(middleNameData, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suffixData, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ageLabel)
                     .addComponent(sexLabel))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SexLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AgeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sexData, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ageData, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addressData, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cityData, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(contactNumberData, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(birthdateLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BirthDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(birthDateData, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(birthPlaceLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BirthPlaceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(birthPlaceData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(studentNoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(StudentNoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(studentNumberData, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lrnLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LRNLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lrnData, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(yearLevelLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(YearLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(yearLevelData, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(courseLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CourseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(courseData, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -380,9 +447,8 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
         JFrame frame = new JFrame("Cancel");
-        if(JOptionPane.showConfirmDialog(frame,"Are you sure you want to cancel?", "CANCEL",
-                JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION)
-        {
+        if (JOptionPane.showConfirmDialog(frame, "Are you sure you want to cancel?", "CANCEL",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
             this.dispose();
         }
     }//GEN-LAST:event_cancelButtonActionPerformed
@@ -422,47 +488,54 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new viewStudentInformationForm().setVisible(true);
+                viewStudentInformationForm dialog = new viewStudentInformationForm(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AgeLabel;
-    private javax.swing.JLabel BirthDateLabel;
-    private javax.swing.JLabel BirthPlaceLabel;
-    private javax.swing.JLabel CourseLabel;
-    private javax.swing.JLabel FirstNameLabel;
-    private javax.swing.JLabel LRNLabel;
-    private javax.swing.JLabel LastNameLabel;
-    private javax.swing.JLabel MiddleNameLabel;
-    private javax.swing.JLabel SexLabel;
-    private javax.swing.JLabel StudentNoLabel;
-    private javax.swing.JLabel SuffixLabel;
-    private javax.swing.JLabel YearLevel;
+    private javax.swing.JLabel addressData;
+    private javax.swing.JLabel ageData;
     private javax.swing.JLabel ageLabel;
+    private javax.swing.JLabel birthDateData;
+    private javax.swing.JLabel birthPlaceData;
     private javax.swing.JLabel birthPlaceLabel;
     private javax.swing.JLabel birthdateLabel;
     private javax.swing.JButton cancelButton;
+    private javax.swing.JLabel cityData;
+    private javax.swing.JLabel contactNumberData;
+    private javax.swing.JLabel courseData;
     private javax.swing.JLabel courseLabel;
+    private javax.swing.JLabel firstNameData;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lastNameData;
     private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JLabel lrnData;
     private javax.swing.JLabel lrnLabel;
     private javax.swing.JLabel midNameLabel;
+    private javax.swing.JLabel middleNameData;
     private javax.swing.JButton saveButton;
+    private javax.swing.JLabel sexData;
     private javax.swing.JLabel sexLabel;
     private javax.swing.JLabel studentNoLabel;
+    private javax.swing.JLabel studentNumberData;
+    private javax.swing.JLabel suffixData;
     private javax.swing.JLabel suffixLabel;
+    private javax.swing.JLabel yearLevelData;
     private javax.swing.JLabel yearLevelLabel;
     // End of variables declaration//GEN-END:variables
 

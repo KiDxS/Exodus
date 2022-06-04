@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="title" type="java.lang.String" value="EXODUS - View Student Profile"/>
   </Properties>
   <SyntheticProperties>
@@ -126,9 +126,9 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="MiddleNameLabel" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="middleNameData" alignment="1" max="32767" attributes="0"/>
                                                   <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="AgeLabel" alignment="1" pref="167" max="32767" attributes="0"/>
+                                                  <Component id="ageData" alignment="1" pref="167" max="32767" attributes="0"/>
                                               </Group>
                                               <Component id="midNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -136,8 +136,8 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="suffixLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="sexLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="SuffixLabel" alignment="0" pref="113" max="32767" attributes="0"/>
-                                              <Component id="SexLabel" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="suffixData" alignment="0" pref="113" max="32767" attributes="0"/>
+                                              <Component id="sexData" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -146,29 +146,29 @@
                                       <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="YearLevel" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                                      <Component id="yearLevelData" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="StudentNoLabel" alignment="0" pref="416" max="32767" attributes="0"/>
-                                          <Component id="BirthPlaceLabel" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="BirthDateLabel" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="FirstNameLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="studentNumberData" alignment="0" pref="416" max="32767" attributes="0"/>
+                                          <Component id="birthPlaceData" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="birthDateData" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="firstNameData" alignment="0" max="32767" attributes="0"/>
                                           <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="LastNameLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="lastNameData" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="18" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="CourseLabel" alignment="0" pref="416" max="32767" attributes="0"/>
+                                      <Component id="courseData" alignment="0" pref="416" max="32767" attributes="0"/>
                                       <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LRNLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lrnData" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel7" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="addressData" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="cityData" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="contactNumberData" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -182,11 +182,11 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lastNameLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="LastNameLabel" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="lastNameData" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="firstNameLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="FirstNameLabel" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="firstNameData" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="midNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -194,8 +194,8 @@
                           </Group>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="MiddleNameLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="SuffixLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="middleNameData" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="suffixData" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -204,45 +204,45 @@
                           </Group>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="SexLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="AgeLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="sexData" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="ageData" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="addressData" min="-2" pref="35" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="cityData" min="-2" pref="34" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="contactNumberData" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="birthdateLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="BirthDateLabel" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="birthDateData" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="birthPlaceLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="BirthPlaceLabel" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="birthPlaceData" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="studentNoLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="StudentNoLabel" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="studentNumberData" min="-2" pref="32" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lrnLabel" min="-2" pref="16" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="LRNLabel" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="lrnData" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="yearLevelLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="YearLevel" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="yearLevelData" min="-2" pref="32" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="courseLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="CourseLabel" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="courseData" min="-2" pref="26" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -384,7 +384,7 @@
                     <Property name="text" type="java.lang.String" value="Suffix"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="LastNameLabel">
+                <Component class="javax.swing.JLabel" name="lastNameData">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="0" red="cc" type="rgb"/>
@@ -400,7 +400,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="FirstNameLabel">
+                <Component class="javax.swing.JLabel" name="firstNameData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  First Name"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -410,17 +410,24 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="MiddleNameLabel">
+                <Component class="javax.swing.JLabel" name="middleNameData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="  Middle Name"/>
+                    <Property name="text" type="java.lang.String" value="Middle Name"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="5" left="5" right="5" top="5"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="SuffixLabel">
+                <Component class="javax.swing.JLabel" name="suffixData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Suffix"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -430,7 +437,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="AgeLabel">
+                <Component class="javax.swing.JLabel" name="ageData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Age"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -440,7 +447,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="SexLabel">
+                <Component class="javax.swing.JLabel" name="sexData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Sex"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -450,7 +457,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="BirthDateLabel">
+                <Component class="javax.swing.JLabel" name="birthDateData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Birthdate"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -460,7 +467,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="BirthPlaceLabel">
+                <Component class="javax.swing.JLabel" name="birthPlaceData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Birthplace"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -470,7 +477,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="StudentNoLabel">
+                <Component class="javax.swing.JLabel" name="studentNumberData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Student Number"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -480,7 +487,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="LRNLabel">
+                <Component class="javax.swing.JLabel" name="lrnData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  LRN"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -490,7 +497,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="YearLevel">
+                <Component class="javax.swing.JLabel" name="yearLevelData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Year Level"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -500,7 +507,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="CourseLabel">
+                <Component class="javax.swing.JLabel" name="courseData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Course"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -521,7 +528,7 @@
                     <Property name="text" type="java.lang.String" value="House no./ Street/ baranggay "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel3">
+                <Component class="javax.swing.JLabel" name="addressData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  House no./ Street/ baranggay "/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -542,7 +549,7 @@
                     <Property name="text" type="java.lang.String" value="City/municipality"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel5">
+                <Component class="javax.swing.JLabel" name="cityData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  City/municipality"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -563,7 +570,7 @@
                     <Property name="text" type="java.lang.String" value="Contact No:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel7">
+                <Component class="javax.swing.JLabel" name="contactNumberData">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="  Contact No"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
