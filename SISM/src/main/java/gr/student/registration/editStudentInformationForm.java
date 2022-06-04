@@ -318,6 +318,8 @@ public class editStudentInformationForm extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        jScrollPane2.getVerticalScrollBar().setUnitIncrement(16);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
