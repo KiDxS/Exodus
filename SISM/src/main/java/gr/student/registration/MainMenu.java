@@ -4,6 +4,9 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
 import java.sql.*;
 import gr.student.registration.config.SQLDatabaseConnection;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -69,6 +72,11 @@ public class MainMenu extends javax.swing.JFrame {
         deleteButton.setForeground(new java.awt.Color(255, 255, 255));
         deleteButton.setText("Delete");
         deleteButton.setBorderPainted(false);
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         viewButton.setBackground(new java.awt.Color(0, 135, 150));
         viewButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -189,13 +197,13 @@ public class MainMenu extends javax.swing.JFrame {
                     String suffix = rs.getString("Suffix");
                     String fullName;
                     int studentId = rs.getInt("Student ID");
-                    
-                    if(suffix.equals("NA")){
+
+                    if (suffix.equals("NA")) {
                         fullName = String.format("%s %s", firstName, lastName);
-                    } else{
+                    } else {
                         fullName = String.format("%s %s %s", firstName, lastName, suffix);
                     }
-                    
+
                     vector.add(fullName);
                     vector.add(studentId);
                 }
@@ -208,11 +216,40 @@ public class MainMenu extends javax.swing.JFrame {
     }
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-          addStudentForm diag = new addStudentForm(this, true);
-          diag.setVisible(true);
+        addStudentForm diag = new addStudentForm(this, true);
+        diag.setVisible(true);
 //        testDialog diag = new testDialog(this, true);
 //        diag.setVisible(true);
     }//GEN-LAST:event_addButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel df = (DefaultTableModel) table.getModel();
+        int row = table.getSelectedRow(); // Returns the selected row
+        String studentName = df.getValueAt(row, 0).toString(); // Retrieves the name of the student that was selected.
+        String studentId = df.getValueAt(row, 1).toString(); // Retrieves the studentId of the student that was selected.
+        if (JOptionPane.showConfirmDialog(null, String.format("Are you sure you want to delete %s?", studentName), "Delete student",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+            // If the answer is Yes
+            try {
+                preparedStatement = connection.prepareStatement("DELETE FROM `students` WHERE `students`.`Student ID` = ?");
+                preparedStatement.setString(1, studentId);
+                int statusCode = preparedStatement.executeUpdate();
+
+                if (statusCode == 1) {
+                    JOptionPane.showMessageDialog(this, "Student has been deleted successfuly.");
+                    Fetch();
+
+                } else {
+                    JOptionPane.showMessageDialog(this, "An error has occured while deleting the student.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
     /**
      * @param args the command line arguments
