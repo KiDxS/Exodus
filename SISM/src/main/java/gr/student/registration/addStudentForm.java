@@ -349,6 +349,8 @@ public class addStudentForm extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jScrollPane2.getVerticalScrollBar().setUnitIncrement(16);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -456,6 +458,7 @@ public class addStudentForm extends javax.swing.JDialog {
                 if (statusCode == 1) {
                     JOptionPane.showMessageDialog(this, "Student has been added successfuly.");
                     frame.Fetch();
+                    this.dispose();
 
                 } else {
                     JOptionPane.showMessageDialog(this, "An error has occured while adding the student.", "Error", JOptionPane.ERROR_MESSAGE);
