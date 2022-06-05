@@ -4,12 +4,13 @@
  */
 package gr.student.registration;
 
-import java.sql.*;
 import gr.student.registration.config.SQLDatabaseConnection;
+import java.sql.*;
 import gr.student.registration.utils.FieldValidators;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
 import java.util.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -30,6 +31,7 @@ public class editStudentInformation extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         frame = (MainMenu) parent;
+        Fetch();
     }
 
     /**
@@ -67,8 +69,8 @@ public class editStudentInformation extends javax.swing.JDialog {
         sexComboBox = new javax.swing.JComboBox<>();
         yearComboBox = new javax.swing.JComboBox<>();
         courseComboBox = new javax.swing.JComboBox<>();
-        baranggayLabel = new javax.swing.JLabel();
-        baranggayField = new javax.swing.JTextField();
+        addressLabel = new javax.swing.JLabel();
+        addressField = new javax.swing.JTextField();
         cityLabel = new javax.swing.JLabel();
         cityField = new javax.swing.JTextField();
         contactLabel = new javax.swing.JLabel();
@@ -152,12 +154,12 @@ public class editStudentInformation extends javax.swing.JDialog {
 
         courseComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BS in Information Technology (BSIT)", "BS in Information System (BSIS)", "BS in Agro-Forestry (BSAF)", "BS in Fisheries and Aquatic Sciences (BSFAS)", "BS in Food Technology (BSFT)", "BS in Marine Biology (BSMB)", "Bachelor of Public Administration (BPA)", "BS in Disaster Resiliency and Management (BSDRM)", "BS in Entrepreneurship (BS ENTREP)", "BS in Social Work (BSSW)", "BS in Tourism Management (BSTM)", "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Secondary Education (BSeD)", "Bachelor of Technology and Livelihood Education (BTLEd)" }));
 
-        baranggayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        baranggayLabel.setText("House no./ Street/ baranggay:");
+        addressLabel.setForeground(new java.awt.Color(0, 0, 0));
+        addressLabel.setText("House no./ Street/ baranggay:");
 
-        baranggayField.addActionListener(new java.awt.event.ActionListener() {
+        addressField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                baranggayFieldActionPerformed(evt);
+                addressFieldActionPerformed(evt);
             }
         });
 
@@ -210,8 +212,8 @@ public class editStudentInformation extends javax.swing.JDialog {
                             .addComponent(courseLabel)
                             .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(baranggayLabel)
-                            .addComponent(baranggayField))
+                            .addComponent(addressLabel)
+                            .addComponent(addressField))
                         .addComponent(cityLabel))
                     .addComponent(contactLabel)
                     .addComponent(contactField))
@@ -245,9 +247,9 @@ public class editStudentInformation extends javax.swing.JDialog {
                     .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(baranggayLabel)
+                .addComponent(addressLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(baranggayField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cityLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -365,6 +367,49 @@ public class editStudentInformation extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Fetch() {
+        try {
+
+            DefaultTableModel df = (DefaultTableModel) frame.table.getModel();
+            int row = frame.table.getSelectedRow();
+            String studentId = df.getValueAt(row, 1).toString();
+            preparedStatement = connection.prepareStatement("SELECT * FROM `students` WHERE `Student ID` = ?");
+            preparedStatement.setString(1, studentId);
+            rs = preparedStatement.executeQuery();
+            if (rs.next()) {
+                String firstName = rs.getString("First Name");
+                String lastName = rs.getString("Last Name");
+                String suffix = rs.getString("Suffix");
+                String age = rs.getString("Age");
+                String birthDate = rs.getString("Birthdate");
+                String birthPlace = rs.getString("Birthplace");
+                String LRN = rs.getString("LRN");
+                String yearLevel = rs.getString("Year Level");
+                String course = rs.getString("Course");
+                String sex = rs.getString("Sex");
+                String contactNumber = rs.getString("Contact Number");
+                String city = rs.getString("City");
+                String address = rs.getString("Address");
+
+                firstNameField.setText(firstName);
+                lastNameField.setText(lastName);
+                suffixField.setText(suffix);
+                ageField.setText(age);
+                birthDateField.setText(birthDate);
+                birthPlaceField.setText(birthPlace);
+                LRNField.setText(LRN);
+                yearComboBox.setSelectedItem(yearLevel);
+                courseComboBox.setSelectedItem(course);
+                sexComboBox.setSelectedItem(sex);
+                contactField.setText(contactNumber);
+                cityField.setText(city);
+                addressField.setText(address);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     private void firstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_firstNameFieldActionPerformed
@@ -390,7 +435,7 @@ public class editStudentInformation extends javax.swing.JDialog {
             middleNameField.setText(null);
             suffixField.setText(null);
             ageField.setText(null);
-            baranggayField.setText(null);
+            addressField.setText(null);
             cityField.setText(null);
             contactField.setText(null);
             birthDateField.setText(null);
@@ -399,7 +444,7 @@ public class editStudentInformation extends javax.swing.JDialog {
             sexComboBox.setSelectedIndex(0);
             yearComboBox.setSelectedIndex(0);
             courseComboBox.setSelectedIndex(0);
-        }      
+        }
 
     }//GEN-LAST:event_clearButtonActionPerformed
 
@@ -421,7 +466,7 @@ public class editStudentInformation extends javax.swing.JDialog {
         String yearLevel = yearComboBox.getSelectedItem().toString();
         String course = courseComboBox.getSelectedItem().toString();
         String contactNumber = contactField.getText();
-        String address = baranggayField.getText();
+        String address = addressField.getText();
         String city = cityField.getText();
         try {
             Map<String, String> dictionary = new HashMap<String, String>(); // Creates a hashmap to store the fields.
@@ -435,12 +480,12 @@ public class editStudentInformation extends javax.swing.JDialog {
             dictionary.put("City", city);
             dictionary.put("Address", address);
             FieldValidators validator = new FieldValidators();
-            
+
             // If the value returned is not 1 then continue
             // 1 = An error has occured
             // 0 = No error occured.
-            if (validator.Validate(dictionary) != 1) { 
-                preparedStatement = connection.prepareStatement("INSERT INTO `students` (`Student ID`, `First Name`, `Middle Name`, `Last Name`, `Suffix`, `Age`, `Birthdate`, `Birthplace`, `LRN`, `Year Level`, `Course`, `Sex`, `Contact Number`, `City`, `Address`) VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            if (validator.Validate(dictionary) != 1) {
+                preparedStatement = connection.prepareStatement("UPDATE `students` SET `First Name` = ?, `Middle Name` = ?, `Last Name` = ?, `Suffix` = ?, `Age` = ?, `Birthdate` = ?, `Birthplace` = ?, `LRN` = ?, `Year Level` = ?, `Course` = ?, `Sex` = ?, `Contact Number` = ?, `City` = ?, `Address` = ?");
                 preparedStatement.setString(1, firstName);
                 preparedStatement.setString(2, middleName);
                 preparedStatement.setString(3, lastName);
@@ -458,7 +503,7 @@ public class editStudentInformation extends javax.swing.JDialog {
                 int statusCode = preparedStatement.executeUpdate();
 
                 if (statusCode == 1) {
-                    JOptionPane.showMessageDialog(this, "Student has been added successfuly.");
+                    JOptionPane.showMessageDialog(this, "Student has been edited successfuly.");
                     frame.Fetch();
                     this.dispose();
 
@@ -473,9 +518,9 @@ public class editStudentInformation extends javax.swing.JDialog {
 
     }//GEN-LAST:event_submitButtonActionPerformed
 
-    private void baranggayFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baranggayFieldActionPerformed
+    private void addressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_baranggayFieldActionPerformed
+    }//GEN-LAST:event_addressFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -524,10 +569,10 @@ public class editStudentInformation extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField LRNField;
+    private javax.swing.JTextField addressField;
+    private javax.swing.JLabel addressLabel;
     private javax.swing.JTextField ageField;
     private javax.swing.JLabel ageLabel;
-    private javax.swing.JTextField baranggayField;
-    private javax.swing.JLabel baranggayLabel;
     private javax.swing.JTextField birthDateField;
     private javax.swing.JTextField birthPlaceField;
     private javax.swing.JLabel birthPlaceLabel;
