@@ -1,9 +1,9 @@
 package gr.student.registration;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
 import java.sql.*;
 import gr.student.registration.config.SQLDatabaseConnection;
 import java.util.Vector;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -20,7 +20,7 @@ public class MainMenu extends javax.swing.JFrame {
     Connection connection = sqlConnection.initializeConnection("exodus");
     PreparedStatement preparedStatement;
     ResultSet rs;
-
+    
     /**
      * Creates new form Main
      */
@@ -28,7 +28,7 @@ public class MainMenu extends javax.swing.JFrame {
         initComponents();
         Fetch();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,12 +69,22 @@ public class MainMenu extends javax.swing.JFrame {
         deleteButton.setForeground(new java.awt.Color(255, 255, 255));
         deleteButton.setText("Delete");
         deleteButton.setBorderPainted(false);
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         viewButton.setBackground(new java.awt.Color(0, 135, 150));
         viewButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         viewButton.setForeground(new java.awt.Color(255, 255, 255));
         viewButton.setText("View");
         viewButton.setBorderPainted(false);
+        viewButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewButtonActionPerformed(evt);
+            }
+        });
 
         table.getTableHeader().setBackground(new java.awt.Color(0,0,0));
         table.setBackground(new java.awt.Color(255, 255, 255));
@@ -169,10 +179,11 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     public void Fetch() {
         try {
             int quantityOfColumns;
+            
             preparedStatement = connection.prepareStatement("SELECT * FROM students");
             rs = preparedStatement.executeQuery();
             ResultSetMetaData resultSetMetaData = rs.getMetaData();
@@ -184,18 +195,17 @@ public class MainMenu extends javax.swing.JFrame {
                 Vector vector = new Vector();
                 for (int index = 1; index <= quantityOfColumns; index++) {
                     String firstName = rs.getString("First Name");
-                    String middleName = rs.getString("Middle Name");
                     String lastName = rs.getString("Last Name");
                     String suffix = rs.getString("Suffix");
                     String fullName;
                     int studentId = rs.getInt("Student ID");
-                    
-                    if(suffix.equals("NA")){
+
+                    if (suffix.equals("NA")) {
                         fullName = String.format("%s %s", firstName, lastName);
-                    } else{
+                    } else {
                         fullName = String.format("%s %s %s", firstName, lastName, suffix);
                     }
-                    
+
                     vector.add(fullName);
                     vector.add(studentId);
                 }
@@ -208,11 +218,44 @@ public class MainMenu extends javax.swing.JFrame {
     }
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-          addStudentForm diag = new addStudentForm(this, true);
-          diag.setVisible(true);
-//        testDialog diag = new testDialog(this, true);
-//        diag.setVisible(true);
+        addStudentForm dialog = new addStudentForm(this, true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_addButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel df = (DefaultTableModel) table.getModel();
+        int row = table.getSelectedRow(); // Returns the selected row
+        String studentName = df.getValueAt(row, 0).toString(); // Retrieves the name of the student that was selected.
+        String studentId = df.getValueAt(row, 1).toString(); // Retrieves the studentId of the student that was selected.
+        if (JOptionPane.showConfirmDialog(null, String.format("Are you sure you want to delete %s?", studentName), "Delete student",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+            // If the answer is Yes
+            try {
+                preparedStatement = connection.prepareStatement("DELETE FROM `students` WHERE `students`.`Student ID` = ?");
+                preparedStatement.setString(1, studentId);
+                int statusCode = preparedStatement.executeUpdate();
+
+                if (statusCode == 1) {
+                    JOptionPane.showMessageDialog(this, "Student has been deleted successfuly.");
+                    Fetch();
+
+                } else {
+                    JOptionPane.showMessageDialog(this, "An error has occured while deleting the student.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
+        // TODO add your handling code here:
+        viewStudentInformationForm dialog = new viewStudentInformationForm(this, true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_viewButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,7 +298,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton deleteButton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainMenuPanel;
-    private javax.swing.JTable table;
+    public javax.swing.JTable table;
     private javax.swing.JButton viewButton;
     // End of variables declaration//GEN-END:variables
 }
