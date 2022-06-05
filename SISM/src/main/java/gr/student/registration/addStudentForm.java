@@ -154,7 +154,7 @@ public class addStudentForm extends javax.swing.JDialog {
         courseComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BS in Information Technology (BSIT)", "BS in Information System (BSIS)", "BS in Agro-Forestry (BSAF)", "BS in Fisheries and Aquatic Sciences (BSFAS)", "BS in Food Technology (BSFT)", "BS in Marine Biology (BSMB)", "Bachelor of Public Administration (BPA)", "BS in Disaster Resiliency and Management (BSDRM)", "BS in Entrepreneurship (BS ENTREP)", "BS in Social Work (BSSW)", "BS in Tourism Management (BSTM)", "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Secondary Education (BSeD)", "Bachelor of Technology and Livelihood Education (BTLEd)" }));
 
         baranggayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        baranggayLabel.setText("House no./ Street/ baranggay:");
+        baranggayLabel.setText("House no./ Street/ Baranggay:");
 
         baranggayField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +163,7 @@ public class addStudentForm extends javax.swing.JDialog {
         });
 
         cityLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cityLabel.setText("City/municipality:");
+        cityLabel.setText("City/Municipality:");
 
         contactLabel.setForeground(new java.awt.Color(0, 0, 0));
         contactLabel.setText("Contact No:");
