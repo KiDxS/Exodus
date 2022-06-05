@@ -195,7 +195,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
         suffixLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
-        suffixLabel.setText("Suffix");
+        suffixLabel.setText("Suffix:");
 
         lastNameData.setBackground(new java.awt.Color(204, 0, 204));
         lastNameData.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
@@ -241,7 +241,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
         cityLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         cityLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cityLabel.setText("City/Municipality");
+        cityLabel.setText("City/Municipality:");
 
         cityData.setText("City/municipality");
         cityData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
