@@ -378,6 +378,7 @@ public class editStudentInformation extends javax.swing.JDialog {
             rs = preparedStatement.executeQuery();
             if (rs.next()) {
                 String firstName = rs.getString("First Name");
+                String middleName = rs.getString("Middle Name");
                 String lastName = rs.getString("Last Name");
                 String suffix = rs.getString("Suffix");
                 String age = rs.getString("Age");
@@ -392,6 +393,7 @@ public class editStudentInformation extends javax.swing.JDialog {
                 String address = rs.getString("Address");
 
                 firstNameField.setText(firstName);
+                middleNameField.setText(middleName);
                 lastNameField.setText(lastName);
                 suffixField.setText(suffix);
                 ageField.setText(age);

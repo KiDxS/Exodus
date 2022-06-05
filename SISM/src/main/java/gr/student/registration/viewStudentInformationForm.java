@@ -51,6 +51,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
             if (rs.next()) {
                 String studentNumber = rs.getString("Student ID");
                 String firstName = rs.getString("First Name");
+                String middleName = rs.getString("Middle Name");
                 String lastName = rs.getString("Last Name");
                 String suffix = rs.getString("Suffix");
                 String age = rs.getString("Age");
@@ -65,6 +66,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                 String address = rs.getString("Address");
 
                 firstNameData.setText(firstName);
+                middleNameData.setText(middleName);
                 lastNameData.setText(lastName);
                 suffixData.setText(suffix);
                 ageData.setText(age);
