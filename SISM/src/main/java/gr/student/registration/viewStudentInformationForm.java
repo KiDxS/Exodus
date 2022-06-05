@@ -234,13 +234,15 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
         addressLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         addressLabel.setForeground(new java.awt.Color(0, 0, 0));
-        addressLabel.setText("House no./ Street/ baranggay ");
+        addressLabel.setText("House no./ Street/ Baranggay:");
+
         addressData.setText("House no./ Street/ baranggay ");
         addressData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
         cityLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         cityLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cityLabel.setText("City/municipality");
+        cityLabel.setText("City/Municipality");
+
         cityData.setText("City/municipality");
         cityData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
