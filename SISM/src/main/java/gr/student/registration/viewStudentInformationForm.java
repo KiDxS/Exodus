@@ -169,14 +169,14 @@ public class viewStudentInformationForm extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("House no./ Street/ baranggay ");
+        jLabel2.setText("House no./ Street/ Baranggay ");
 
         jLabel3.setText("  House no./ Street/ baranggay ");
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("City/municipality");
+        jLabel4.setText("City/Municipality");
 
         jLabel5.setText("  City/municipality");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
