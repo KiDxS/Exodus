@@ -376,8 +376,7 @@ public class addStudentForm extends javax.swing.JDialog {
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         // TODO add your handling code here:
-        JFrame frame = new JFrame("Cancel");
-        if (JOptionPane.showConfirmDialog(frame, "Are you sure you want to cancel?", "CANCEL",
+        if (JOptionPane.showConfirmDialog(null, "Are you sure you want to cancel?", "CANCEL",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
             this.dispose();
         }
@@ -385,20 +384,24 @@ public class addStudentForm extends javax.swing.JDialog {
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
-        lastNameField.setText(null);
-        firstNameField.setText(null);
-        middleNameField.setText(null);
-        suffixField.setText(null);
-        ageField.setText(null);
-        baranggayField.setText(null);
-        cityField.setText(null);
-        contactField.setText(null);
-        birthDateField.setText(null);
-        birthPlaceField.setText(null);
-        LRNField.setText(null);
-        sexComboBox.setSelectedIndex(0);
-        yearComboBox.setSelectedIndex(0);
-        courseComboBox.setSelectedIndex(0);
+        if (JOptionPane.showConfirmDialog(null, "Are you sure you want to clear all?", "CLEAR ALL",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+            lastNameField.setText(null);
+            firstNameField.setText(null);
+            middleNameField.setText(null);
+            suffixField.setText(null);
+            ageField.setText(null);
+            baranggayField.setText(null);
+            cityField.setText(null);
+            contactField.setText(null);
+            birthDateField.setText(null);
+            birthPlaceField.setText(null);
+            LRNField.setText(null);
+            sexComboBox.setSelectedIndex(0);
+            yearComboBox.setSelectedIndex(0);
+            courseComboBox.setSelectedIndex(0);
+        }      
+
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void yearComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearComboBoxActionPerformed
