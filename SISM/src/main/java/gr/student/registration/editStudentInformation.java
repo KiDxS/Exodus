@@ -103,39 +103,50 @@ public class editStudentInformation extends javax.swing.JDialog {
             }
         });
 
+        lrnLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lrnLabel.setForeground(new java.awt.Color(0, 0, 0));
         lrnLabel.setText("LRN");
 
+        birthdateLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         birthdateLabel.setForeground(new java.awt.Color(0, 0, 0));
         birthdateLabel.setText("Birthdate:");
 
+        ageLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         ageLabel.setForeground(new java.awt.Color(0, 0, 0));
         ageLabel.setText("Age:");
 
         lastNameLabel.setBackground(new java.awt.Color(0, 0, 0));
+        lastNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lastNameLabel.setForeground(new java.awt.Color(0, 0, 0));
         lastNameLabel.setText("Last Name:");
 
+        yearLevelLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         yearLevelLabel.setForeground(new java.awt.Color(0, 0, 0));
         yearLevelLabel.setText("Year Level:");
 
+        firstNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         firstNameLabel.setForeground(new java.awt.Color(0, 0, 0));
         firstNameLabel.setText("First Name:");
 
+        midNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         midNameLabel.setForeground(new java.awt.Color(0, 0, 0));
         midNameLabel.setText("Middle Name:");
 
+        courseLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         courseLabel.setForeground(new java.awt.Color(0, 0, 0));
         courseLabel.setText("Course:");
 
+        sexLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         sexLabel.setForeground(new java.awt.Color(0, 0, 0));
         sexLabel.setText("Sex:");
 
+        birthPlaceLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         birthPlaceLabel.setForeground(new java.awt.Color(0, 0, 0));
         birthPlaceLabel.setText("Birthplace:");
 
+        suffixLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
-        suffixLabel.setText("Suffix");
+        suffixLabel.setText("Suffix:");
 
         firstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,8 +165,9 @@ public class editStudentInformation extends javax.swing.JDialog {
 
         courseComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BS in Information Technology (BSIT)", "BS in Information System (BSIS)", "BS in Agro-Forestry (BSAF)", "BS in Fisheries and Aquatic Sciences (BSFAS)", "BS in Food Technology (BSFT)", "BS in Marine Biology (BSMB)", "Bachelor of Public Administration (BPA)", "BS in Disaster Resiliency and Management (BSDRM)", "BS in Entrepreneurship (BS ENTREP)", "BS in Social Work (BSSW)", "BS in Tourism Management (BSTM)", "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Secondary Education (BSeD)", "Bachelor of Technology and Livelihood Education (BTLEd)" }));
 
+        addressLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         addressLabel.setForeground(new java.awt.Color(0, 0, 0));
-        addressLabel.setText("House no./ Street/ baranggay:");
+        addressLabel.setText("House no./ Street/ Baranggay:");
 
         addressField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,9 +175,11 @@ public class editStudentInformation extends javax.swing.JDialog {
             }
         });
 
+        cityLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         cityLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cityLabel.setText("City/municipality:");
+        cityLabel.setText("City/Municipality:");
 
+        contactLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         contactLabel.setForeground(new java.awt.Color(0, 0, 0));
         contactLabel.setText("Contact No:");
 

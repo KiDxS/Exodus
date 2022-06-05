@@ -381,7 +381,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Suffix"/>
+                    <Property name="text" type="java.lang.String" value="Suffix:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lastNameData">
@@ -611,7 +611,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="House no./ Street/ baranggay "/>
+                    <Property name="text" type="java.lang.String" value="House no./ Street/ Baranggay:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="addressData">
@@ -639,7 +639,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="City/municipality"/>
+                    <Property name="text" type="java.lang.String" value="City/Municipality:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="cityData">
