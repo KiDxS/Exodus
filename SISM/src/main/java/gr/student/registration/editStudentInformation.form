@@ -176,8 +176,8 @@
                                       <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="yearComboBox" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                                       <Component id="courseComboBox" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="baranggayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="baranggayField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="addressLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="addressField" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="cityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -220,9 +220,9 @@
                               <Component id="sexComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="baranggayLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="baranggayField" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressField" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="cityLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -428,7 +428,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JLabel" name="baranggayLabel">
+                <Component class="javax.swing.JLabel" name="addressLabel">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -436,9 +436,9 @@
                     <Property name="text" type="java.lang.String" value="House no./ Street/ baranggay:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="baranggayField">
+                <Component class="javax.swing.JTextField" name="addressField">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="baranggayFieldActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addressFieldActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="cityLabel">

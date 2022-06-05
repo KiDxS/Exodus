@@ -48,11 +48,10 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
             preparedStatement = connection.prepareStatement("SELECT * FROM `students` WHERE `Student ID` = ?");
             preparedStatement.setString(1, studentId);
             rs = preparedStatement.executeQuery();
-            ResultSetMetaData resultSetMetaData = rs.getMetaData();
-
             if (rs.next()) {
                 String studentNumber = rs.getString("Student ID");
                 String firstName = rs.getString("First Name");
+                String middleName = rs.getString("Middle Name");
                 String lastName = rs.getString("Last Name");
                 String suffix = rs.getString("Suffix");
                 String age = rs.getString("Age");
@@ -67,6 +66,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                 String address = rs.getString("Address");
 
                 firstNameData.setText(firstName);
+                middleNameData.setText(middleName);
                 lastNameData.setText(lastName);
                 suffixData.setText(suffix);
                 ageData.setText(age);
@@ -132,7 +132,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
         contactNumberLabel = new javax.swing.JLabel();
         contactNumberData = new javax.swing.JLabel();
         cancelButton = new javax.swing.JButton();
-        saveButton = new javax.swing.JButton();
+        editButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("EXODUS - View Student Profile");
@@ -381,13 +381,13 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
             }
         });
 
-        saveButton.setBackground(new java.awt.Color(0, 145, 24));
-        saveButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        saveButton.setForeground(new java.awt.Color(255, 255, 255));
-        saveButton.setText("Edit");
-        saveButton.addActionListener(new java.awt.event.ActionListener() {
+        editButton.setBackground(new java.awt.Color(0, 145, 24));
+        editButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        editButton.setForeground(new java.awt.Color(255, 255, 255));
+        editButton.setText("Edit");
+        editButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveButtonActionPerformed(evt);
+                editButtonActionPerformed(evt);
             }
         });
 
@@ -402,7 +402,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(113, 113, 113)
@@ -418,7 +418,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -451,9 +451,13 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_cancelButtonActionPerformed
 
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_saveButtonActionPerformed
+        editStudentInformation dialog = new editStudentInformation(frame, true);
+        dialog.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_editButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -514,6 +518,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
     private javax.swing.JLabel contactNumberLabel;
     private javax.swing.JLabel courseData;
     private javax.swing.JLabel courseLabel;
+    private javax.swing.JButton editButton;
     private javax.swing.JLabel firstNameData;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JLabel jLabel1;
@@ -526,7 +531,6 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
     private javax.swing.JLabel lrnLabel;
     private javax.swing.JLabel midNameLabel;
     private javax.swing.JLabel middleNameData;
-    private javax.swing.JButton saveButton;
     private javax.swing.JLabel sexData;
     private javax.swing.JLabel sexLabel;
     private javax.swing.JLabel studentNoLabel;
