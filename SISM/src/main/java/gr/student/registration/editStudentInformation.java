@@ -495,7 +495,10 @@ public class editStudentInformation extends javax.swing.JDialog {
             // 1 = An error has occured
             // 0 = No error occured.
             if (validator.Validate(dictionary) != 1) {
-                preparedStatement = connection.prepareStatement("UPDATE `students` SET `First Name` = ?, `Middle Name` = ?, `Last Name` = ?, `Suffix` = ?, `Age` = ?, `Birthdate` = ?, `Birthplace` = ?, `LRN` = ?, `Year Level` = ?, `Course` = ?, `Sex` = ?, `Contact Number` = ?, `City` = ?, `Address` = ?");
+                DefaultTableModel df = (DefaultTableModel) frame.table.getModel();
+                int row = frame.table.getSelectedRow();
+                String studentId = df.getValueAt(row, 1).toString();
+                preparedStatement = connection.prepareStatement("UPDATE `students` SET `First Name` = ?, `Middle Name` = ?, `Last Name` = ?, `Suffix` = ?, `Age` = ?, `Birthdate` = ?, `Birthplace` = ?, `LRN` = ?, `Year Level` = ?, `Course` = ?, `Sex` = ?, `Contact Number` = ?, `City` = ?, `Address` = ? WHERE `students`.`Student ID` = ?");
                 preparedStatement.setString(1, firstName);
                 preparedStatement.setString(2, middleName);
                 preparedStatement.setString(3, lastName);
@@ -510,7 +513,9 @@ public class editStudentInformation extends javax.swing.JDialog {
                 preparedStatement.setString(12, contactNumber);
                 preparedStatement.setString(13, city);
                 preparedStatement.setString(14, address);
+                preparedStatement.setString(15, studentId);
                 int statusCode = preparedStatement.executeUpdate();
+                System.out.println(statusCode);
 
                 if (statusCode == 1) {
                     JOptionPane.showMessageDialog(this, "Student has been edited successfuly.");
