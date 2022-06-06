@@ -135,49 +135,39 @@
                               <Component id="cityField" alignment="1" max="32767" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="birthPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="LRNField" alignment="0" pref="413" max="32767" attributes="0"/>
                                       <Component id="birthPlaceField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="firstNameField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="lastNameField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="birthDateField" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="midNameLabel" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="middleNameField" max="32767" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="ageField" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="sexLabel" min="-2" max="-2" attributes="0"/>
-                                              <Component id="suffixField" pref="141" max="32767" attributes="0"/>
-                                              <Component id="suffixLabel" min="-2" max="-2" attributes="0"/>
-                                              <Component id="sexComboBox" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="yearComboBox" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                                       <Component id="courseComboBox" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="baranggayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="baranggayField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="addressField" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="yearLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lrnLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="birthPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="birthdateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lastNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="midNameLabel" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="middleNameField" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="ageField" alignment="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="suffixLabel" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="suffixField" min="-2" pref="141" max="-2" attributes="0"/>
+                                                  <Component id="sexLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="sexComboBox" min="-2" pref="141" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="courseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="yearComboBox" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                          <Component id="addressLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <Component id="cityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -220,9 +210,9 @@
                               <Component id="sexComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="baranggayLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="baranggayField" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressField" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="cityLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -264,6 +254,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="lrnLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -274,6 +267,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="birthdateLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -282,6 +278,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="ageLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -293,6 +292,9 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -301,6 +303,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="yearLevelLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -309,6 +314,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="firstNameLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -317,14 +325,20 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="midNameLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Middle Name:"/>
+                    <Property name="text" type="java.lang.String" value="Middle Name (NA if none):"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="courseLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -335,6 +349,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="sexLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -343,6 +360,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="birthPlaceLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
@@ -353,10 +373,13 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="suffixLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Suffix"/>
+                    <Property name="text" type="java.lang.String" value="Suffix (NA if none):"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="lastNameField">
@@ -428,31 +451,40 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JLabel" name="baranggayLabel">
+                <Component class="javax.swing.JLabel" name="addressLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="House no./ Street/ baranggay:"/>
+                    <Property name="text" type="java.lang.String" value="House no./ Street/ Baranggay:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="baranggayField">
+                <Component class="javax.swing.JTextField" name="addressField">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="baranggayFieldActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addressFieldActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="cityLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="City/municipality:"/>
+                    <Property name="text" type="java.lang.String" value="City/Municipality:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="cityField">
                 </Component>
                 <Component class="javax.swing.JLabel" name="contactLabel">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="1"/>
+                    </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>

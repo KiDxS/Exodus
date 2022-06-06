@@ -46,7 +46,7 @@ public class MainMenu extends javax.swing.JFrame {
         table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Exodus - Main Menu");
+        setTitle("EXODUS - Main Menu");
         setFocusCycleRoot(false);
         setForeground(new java.awt.Color(102, 255, 102));
         setResizable(false);
