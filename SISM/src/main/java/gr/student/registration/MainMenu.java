@@ -130,10 +130,14 @@ public class MainMenu extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        table.setGridColor(new java.awt.Color(0, 255, 0));
+        table.setAutoscrolls(false);
+        table.setGridColor(new java.awt.Color(204, 204, 204));
+        table.setName(""); // NOI18N
         table.setRowHeight(30);
         table.setSelectionBackground(new java.awt.Color(153, 153, 153));
         table.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        table.setShowGrid(true);
+        table.setShowVerticalLines(false);
         jScrollPane1.setViewportView(table);
         table.setTableHeader(null);
 
