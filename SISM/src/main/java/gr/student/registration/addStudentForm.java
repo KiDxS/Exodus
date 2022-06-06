@@ -129,7 +129,7 @@ public class addStudentForm extends javax.swing.JDialog {
 
         midNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         midNameLabel.setForeground(new java.awt.Color(0, 0, 0));
-        midNameLabel.setText("Middle Name:");
+        midNameLabel.setText("Middle Name (NA if none):");
 
         courseLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         courseLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -145,7 +145,7 @@ public class addStudentForm extends javax.swing.JDialog {
 
         suffixLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
-        suffixLabel.setText("Suffix:");
+        suffixLabel.setText("Suffix (NA if none):");
 
         firstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,41 +192,34 @@ public class addStudentForm extends javax.swing.JDialog {
                     .addComponent(cityField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LRNField, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
+                            .addComponent(birthPlaceField)
+                            .addComponent(firstNameField)
+                            .addComponent(lastNameField)
+                            .addComponent(birthDateField)
+                            .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(baranggayField)
                             .addComponent(yearLevelLabel)
                             .addComponent(lrnLabel)
                             .addComponent(birthPlaceLabel)
                             .addComponent(birthdateLabel)
                             .addComponent(firstNameLabel)
                             .addComponent(lastNameLabel)
-                            .addComponent(LRNField, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
-                            .addComponent(birthPlaceField)
-                            .addComponent(firstNameField)
-                            .addComponent(lastNameField)
-                            .addComponent(birthDateField)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                            .addComponent(midNameLabel)
-                                            .addGap(117, 117, 117))
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                            .addComponent(middleNameField)
-                                            .addGap(25, 25, 25)))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(ageLabel)
-                                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(25, 25, 25)))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(midNameLabel)
+                                    .addComponent(ageLabel)
+                                    .addComponent(middleNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(ageField))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(sexLabel)
-                                    .addComponent(suffixField, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                                    .addComponent(suffixLabel)
-                                    .addComponent(sexComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(suffixLabel)))
                             .addComponent(courseLabel)
                             .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(baranggayLabel)
-                            .addComponent(baranggayField))
+                            .addComponent(baranggayLabel))
                         .addComponent(cityLabel))
                     .addComponent(contactLabel)
                     .addComponent(contactField))
@@ -244,9 +237,9 @@ public class addStudentForm extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(midNameLabel)
-                    .addComponent(suffixLabel))
+                    .addComponent(suffixLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(middleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
