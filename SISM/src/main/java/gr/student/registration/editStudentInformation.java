@@ -123,7 +123,7 @@ public class editStudentInformation extends javax.swing.JDialog {
         firstNameLabel.setText("First Name:");
 
         midNameLabel.setForeground(new java.awt.Color(0, 0, 0));
-        midNameLabel.setText("Middle Name:");
+        midNameLabel.setText("Middle Name (NA if none):");
 
         courseLabel.setForeground(new java.awt.Color(0, 0, 0));
         courseLabel.setText("Course:");
@@ -135,7 +135,7 @@ public class editStudentInformation extends javax.swing.JDialog {
         birthPlaceLabel.setText("Birthplace:");
 
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
-        suffixLabel.setText("Suffix");
+        suffixLabel.setText("Suffix (NA if none):");
 
         firstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,7 +155,7 @@ public class editStudentInformation extends javax.swing.JDialog {
         courseComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BS in Information Technology (BSIT)", "BS in Information System (BSIS)", "BS in Agro-Forestry (BSAF)", "BS in Fisheries and Aquatic Sciences (BSFAS)", "BS in Food Technology (BSFT)", "BS in Marine Biology (BSMB)", "Bachelor of Public Administration (BPA)", "BS in Disaster Resiliency and Management (BSDRM)", "BS in Entrepreneurship (BS ENTREP)", "BS in Social Work (BSSW)", "BS in Tourism Management (BSTM)", "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Secondary Education (BSeD)", "Bachelor of Technology and Livelihood Education (BTLEd)" }));
 
         addressLabel.setForeground(new java.awt.Color(0, 0, 0));
-        addressLabel.setText("House no./ Street/ baranggay:");
+        addressLabel.setText(" House no./ Street/ Baranggay:");
 
         addressField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,41 +179,35 @@ public class editStudentInformation extends javax.swing.JDialog {
                     .addComponent(cityField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(yearLevelLabel)
-                            .addComponent(lrnLabel)
-                            .addComponent(birthPlaceLabel)
-                            .addComponent(birthdateLabel)
-                            .addComponent(firstNameLabel)
-                            .addComponent(lastNameLabel)
                             .addComponent(LRNField, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
                             .addComponent(birthPlaceField)
                             .addComponent(firstNameField)
                             .addComponent(lastNameField)
                             .addComponent(birthDateField)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                            .addComponent(midNameLabel)
-                                            .addGap(117, 117, 117))
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                            .addComponent(middleNameField)
-                                            .addGap(25, 25, 25)))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(ageLabel)
-                                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(25, 25, 25)))
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(sexLabel)
-                                    .addComponent(suffixField, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                                    .addComponent(suffixLabel)
-                                    .addComponent(sexComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(courseLabel)
-                            .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(courseComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(addressLabel)
-                            .addComponent(addressField))
+                            .addComponent(addressField)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(yearLevelLabel)
+                                .addComponent(lrnLabel)
+                                .addComponent(birthPlaceLabel)
+                                .addComponent(birthdateLabel)
+                                .addComponent(firstNameLabel)
+                                .addComponent(lastNameLabel)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(midNameLabel)
+                                        .addComponent(ageLabel)
+                                        .addComponent(middleNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                        .addComponent(ageField))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(suffixLabel)
+                                        .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(sexLabel)
+                                        .addComponent(sexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(courseLabel)
+                                .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(addressLabel)))
                         .addComponent(cityLabel))
                     .addComponent(contactLabel)
                     .addComponent(contactField))
