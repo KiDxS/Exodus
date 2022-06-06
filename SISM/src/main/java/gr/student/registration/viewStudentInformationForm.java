@@ -175,7 +175,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
         midNameLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         midNameLabel.setForeground(new java.awt.Color(0, 0, 0));
-        midNameLabel.setText("Middle Name:");
+        midNameLabel.setText("Middle Name (NA if none):");
 
         courseLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         courseLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -195,7 +195,7 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
         suffixLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         suffixLabel.setForeground(new java.awt.Color(0, 0, 0));
-        suffixLabel.setText("Suffix");
+        suffixLabel.setText("Suffix (NA if none):");
 
         lastNameData.setBackground(new java.awt.Color(204, 0, 204));
         lastNameData.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
@@ -234,13 +234,15 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
 
         addressLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         addressLabel.setForeground(new java.awt.Color(0, 0, 0));
-        addressLabel.setText("House no./ Street/ baranggay ");
+        addressLabel.setText("House no./ Street/ Baranggay ");
+
         addressData.setText("House no./ Street/ baranggay ");
         addressData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
         cityLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         cityLabel.setForeground(new java.awt.Color(0, 0, 0));
-        cityLabel.setText("City/municipality");
+        cityLabel.setText("City/Municipality");
+
         cityData.setText("City/municipality");
         cityData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
@@ -261,17 +263,16 @@ public class viewStudentInformationForm extends javax.swing.JDialog {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(middleNameData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ageLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(ageData, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))
-                                    .addComponent(midNameLabel))
-                                .addGap(24, 24, 24)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(suffixLabel)
+                                    .addComponent(ageLabel)
+                                    .addComponent(midNameLabel)
+                                    .addComponent(middleNameData, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                                    .addComponent(ageData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(sexLabel)
-                                    .addComponent(suffixData, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                                    .addComponent(suffixData, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                                    .addComponent(suffixLabel)
                                     .addComponent(sexData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(lrnLabel)
                             .addComponent(studentNoLabel)

@@ -124,19 +124,17 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="middleNameData" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="ageData" alignment="1" pref="167" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Component id="midNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="midNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="middleNameData" pref="192" max="32767" attributes="0"/>
+                                              <Component id="ageData" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="sexLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="suffixData" pref="127" max="32767" attributes="0"/>
                                               <Component id="suffixLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="sexLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="suffixData" alignment="0" pref="113" max="32767" attributes="0"/>
                                               <Component id="sexData" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -326,7 +324,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Middle Name:"/>
+                    <Property name="text" type="java.lang.String" value="Middle Name (NA if none):"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="courseLabel">
@@ -381,7 +379,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Suffix"/>
+                    <Property name="text" type="java.lang.String" value="Suffix (NA if none):"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lastNameData">
